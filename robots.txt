@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://espacodaplastica.com.br/sitemap.xml

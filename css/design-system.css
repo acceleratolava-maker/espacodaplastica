@@ -1,0 +1,546 @@
+/* ============================================================
+   HOSPITAL ESPAÇO DA PLÁSTICA — DESIGN SYSTEM
+   Luxo clínico editorial · Fraunces + Hanken Grotesk
+   Marfim quente · Verde-floresta · Champanhe (único acento)
+   ============================================================ */
+
+/* ---------- TOKENS ---------- */
+:root {
+  /* Paleta */
+  --ivory:        #F5F0E8;   /* fundo claro dominante */
+  --porcelain:    #FBF8F2;   /* superfícies elevadas no claro */
+  --paper:        #EDE6D9;   /* faixas de respiro no claro */
+  --graphite:     #171B19;   /* quase-preto com alma verde */
+  --forest:       #21322A;   /* verde-floresta profundo */
+  --forest-deep:  #182620;   /* seções escuras */
+  --champagne:    #C2A15F;   /* ÚNICO acento */
+  --champagne-2:  #DCC48F;   /* acento sobre escuro */
+  --stone:        #8B8375;   /* neutro médio, legendas */
+  --ink:          #22261F;   /* texto sobre claro */
+  --ink-soft:     #4C5148;
+
+  /* Tipografia */
+  --serif: 'Fraunces', Georgia, serif;
+  --sans:  'Hanken Grotesk', 'Segoe UI', sans-serif;
+
+  /* Escala de tipo (fluida) */
+  --t-hero:    clamp(2.75rem, 7.2vw, 6.5rem);
+  --t-display: clamp(2.25rem, 5vw, 4.25rem);
+  --t-title:   clamp(1.6rem, 3vw, 2.6rem);
+  --t-lead:    clamp(1.08rem, 1.6vw, 1.35rem);
+  --t-body:    1.0625rem;
+  --t-small:   .875rem;
+  --t-overline:.78rem;
+
+  /* Ritmo */
+  --sp-1: .5rem;  --sp-2: 1rem;   --sp-3: 1.75rem;
+  --sp-4: 2.75rem; --sp-5: 4.5rem; --sp-6: 7rem; --sp-7: 10rem;
+  --gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --measure: 62ch;
+
+  /* Superfície */
+  --radius: 2px;                 /* quase reto: luxo é aresta, não bolha */
+  --hairline: 1px solid color-mix(in srgb, var(--champagne) 45%, transparent);
+  --hairline-dark: 1px solid color-mix(in srgb, var(--champagne-2) 30%, transparent);
+  --shadow-photo: 0 30px 80px -20px rgb(23 27 25 / .35);
+
+  /* Movimento */
+  --ease-lux: cubic-bezier(.22,.8,.24,1);
+  --dur: .9s;
+}
+
+/* ---------- RESET ENXUTO ---------- */
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0 }
+html{ scroll-behavior:smooth }
+body{
+  font-family:var(--sans); font-size:var(--t-body); line-height:1.65;
+  color:var(--ink);
+  /* atmosfera quente em camadas — nunca cor chapada */
+  background:
+    radial-gradient(125% 85% at 12% -8%, color-mix(in srgb, var(--porcelain) 88%, #ffffff) 0%, transparent 52%),
+    radial-gradient(90% 55% at 108% -5%, color-mix(in srgb, var(--champagne) 10%, transparent) 0%, transparent 46%),
+    var(--ivory);
+  background-attachment:fixed;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+img,video{ max-width:100%; display:block }
+a{ color:inherit; text-decoration:none }
+ul,ol{ list-style:none }
+button{ font:inherit; border:0; background:none; cursor:pointer }
+
+/* Grão fotográfico — atmosfera em TODAS as páginas */
+body::after{
+  content:''; position:fixed; inset:0; z-index:9999; pointer-events:none;
+  opacity:.05; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+
+::selection{ background:var(--champagne); color:var(--graphite) }
+
+/* ---------- TIPOGRAFIA EDITORIAL ---------- */
+.serif{ font-family:var(--serif) }
+h1,h2,h3,.display{ font-family:var(--serif); font-weight:420; line-height:1.04;
+  letter-spacing:-.018em; font-optical-sizing:auto; text-wrap:balance;
+  font-variation-settings:"opsz" 144, "SOFT" 0, "WONK" 0; }
+h1{ font-size:var(--t-hero); letter-spacing:-.028em }
+h2{ font-size:var(--t-display); letter-spacing:-.022em }
+h3{ font-size:var(--t-title); line-height:1.14; letter-spacing:-.015em }
+.lead{ font-size:var(--t-lead); line-height:1.58; color:var(--ink-soft); max-width:var(--measure); text-wrap:pretty }
+em, .it{ font-style:italic; font-family:var(--serif); font-weight:360 }
+h1 em, h2 em, h3 em{ color:var(--champagne); font-weight:340 }
+
+.overline{
+  font-family:var(--sans); font-size:var(--t-overline); font-weight:600;
+  letter-spacing:.32em; text-transform:uppercase; color:var(--stone);
+  display:flex; align-items:center; gap:1rem;
+}
+.overline::before{ content:''; width:2.75rem; height:1px; flex:none;
+  background:linear-gradient(90deg, var(--champagne), transparent) }
+.overline.center{ justify-content:center }
+.overline.center::before{ background:linear-gradient(90deg, transparent, var(--champagne)) }
+.overline.center::after{ content:''; width:2.75rem; height:1px; flex:none;
+  background:linear-gradient(90deg, var(--champagne), transparent) }
+.overline.bare::before,.overline.bare::after{ display:none }
+
+/* Número editorial de seção — assinatura visual */
+.sec-num{
+  font-family:var(--serif); font-style:italic; font-weight:300;
+  font-size:clamp(4rem, 9vw, 8.5rem); line-height:.8;
+  color:transparent; -webkit-text-stroke:1px color-mix(in srgb, var(--champagne) 70%, transparent);
+  user-select:none;
+}
+
+/* ---------- TEMA ESCURO POR SEÇÃO ---------- */
+.dark{
+  /* brilho suave verde no alto + profundidade — atmosfera, não cor chapada */
+  background:
+    radial-gradient(115% 75% at 82% -5%, color-mix(in srgb, var(--forest) 65%, transparent) 0%, transparent 58%),
+    radial-gradient(90% 60% at 0% 105%, color-mix(in srgb, #0e1712 60%, transparent) 0%, transparent 55%),
+    var(--forest-deep);
+  color:var(--porcelain);
+}
+.dark .lead{ color:color-mix(in srgb, var(--porcelain) 72%, transparent) }
+.dark .overline{ color:color-mix(in srgb, var(--champagne-2) 85%, transparent) }
+.dark h1 em,.dark h2 em,.dark h3 em{ color:var(--champagne-2) }
+.dark .sec-num{ -webkit-text-stroke-color:color-mix(in srgb, var(--champagne-2) 45%, transparent) }
+
+/* ---------- LAYOUT ---------- */
+.wrap{ max-width:1440px; margin-inline:auto; padding-inline:var(--gutter) }
+.section{ padding-block:var(--sp-6) }
+.section-lg{ padding-block:var(--sp-7) }
+.grid{ display:grid; gap:var(--sp-4) }
+@media (min-width:900px){
+  .grid-2{ grid-template-columns:1fr 1fr }
+  .grid-3{ grid-template-columns:repeat(3,1fr) }
+  .grid-4{ grid-template-columns:repeat(4,1fr) }
+  .grid-asym{ grid-template-columns:5fr 7fr }       /* assimetria editorial */
+  .grid-asym-r{ grid-template-columns:7fr 5fr }
+}
+.hairline-top{ border-top:var(--hairline); padding-top:var(--sp-4) }
+.dark .hairline-top{ border-top:var(--hairline-dark) }
+
+/* ---------- BOTÕES ---------- */
+.btn{
+  display:inline-flex; align-items:center; gap:.8rem;
+  font-family:var(--sans); font-size:.92rem; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase;
+  padding:1.05rem 2.2rem; border-radius:var(--radius);
+  transition:all .45s var(--ease-lux); position:relative; overflow:hidden;
+}
+.btn .arr{ transition:transform .45s var(--ease-lux) }
+.btn:hover .arr{ transform:translateX(6px) }
+
+.btn-gold{ background:var(--champagne); color:var(--graphite) }
+.btn-gold:hover{ background:var(--champagne-2) }
+
+.btn-ghost{ box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--ink) 35%, transparent); color:var(--ink) }
+.btn-ghost:hover{ box-shadow:inset 0 0 0 1px var(--champagne); color:var(--champagne); }
+.dark .btn-ghost{ box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--porcelain) 35%, transparent); color:var(--porcelain) }
+.dark .btn-ghost:hover{ box-shadow:inset 0 0 0 1px var(--champagne-2); color:var(--champagne-2) }
+
+.btn-line{ padding:.4rem 0; letter-spacing:.18em; font-size:.85rem; color:var(--ink);
+  border-bottom:1px solid var(--champagne); border-radius:0 }
+.btn-line:hover{ color:var(--champagne) }
+.dark .btn-line{ color:var(--porcelain) }
+
+/* ---------- NAV ---------- */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.4rem var(--gutter);
+  transition:all .5s var(--ease-lux);
+}
+.nav.scrolled{
+  background:color-mix(in srgb, var(--graphite) 88%, transparent);
+  backdrop-filter:blur(14px); padding-block:.85rem;
+}
+.nav-logo{ font-family:var(--serif); font-size:1.25rem; letter-spacing:.02em; color:var(--porcelain); line-height:1.1 }
+.nav-logo small{ display:block; font-family:var(--sans); font-size:.6rem; font-weight:600;
+  letter-spacing:.42em; text-transform:uppercase; color:var(--champagne-2); margin-top:.3rem }
+.nav-links{ display:none; gap:2.4rem; font-size:.82rem; font-weight:600;
+  letter-spacing:.16em; text-transform:uppercase; color:color-mix(in srgb, var(--porcelain) 85%, transparent) }
+.nav-links a{ padding:.4rem 0; border-bottom:1px solid transparent; transition:all .35s }
+.nav-links a:hover{ color:var(--champagne-2); border-bottom-color:var(--champagne-2) }
+@media (min-width:1100px){ .nav-links{ display:flex } }
+.nav-cta{ display:none }
+@media (min-width:700px){ .nav-cta{ display:inline-flex; padding:.75rem 1.5rem; font-size:.78rem } }
+
+/* Hambúrguer + menu overlay */
+.burger{ width:44px; height:44px; display:grid; place-items:center; gap:0 }
+.burger span{ width:26px; height:1.5px; background:var(--porcelain); display:block; margin-block:3.5px;
+  transition:all .4s var(--ease-lux) }
+@media (min-width:1100px){ .burger{ display:none } }
+.menu-open .burger span:nth-child(1){ transform:translateY(5px) rotate(45deg) }
+.menu-open .burger span:nth-child(2){ transform:translateY(-3.5px) rotate(-45deg) }
+
+.menu{
+  position:fixed; inset:0; z-index:90; background:var(--forest-deep);
+  display:grid; place-content:center; text-align:center; gap:.4rem;
+  opacity:0; visibility:hidden; transition:all .6s var(--ease-lux);
+}
+.menu-open .menu{ opacity:1; visibility:visible }
+.menu a{
+  font-family:var(--serif); font-size:clamp(1.8rem,5vw,3rem); color:var(--porcelain);
+  padding:.35rem; transition:all .4s; opacity:0; transform:translateY(24px);
+}
+.menu-open .menu a{ opacity:1; transform:none }
+.menu a:hover{ color:var(--champagne-2); font-style:italic }
+.menu a:nth-child(1){ transition-delay:.10s } .menu a:nth-child(2){ transition-delay:.16s }
+.menu a:nth-child(3){ transition-delay:.22s } .menu a:nth-child(4){ transition-delay:.28s }
+.menu a:nth-child(5){ transition-delay:.34s } .menu a:nth-child(6){ transition-delay:.40s }
+.menu a:nth-child(7){ transition-delay:.46s } .menu a:nth-child(8){ transition-delay:.52s }
+
+/* ---------- FOTOGRAFIA ---------- */
+.ph{ position:relative; overflow:hidden; background:var(--paper) }
+.ph img{ width:100%; height:100%; object-fit:cover; transition:transform 1.6s var(--ease-lux) }
+.ph:hover img{ transform:scale(1.045) }
+.ph-frame{ box-shadow:var(--shadow-photo) }
+.ph-tall{ aspect-ratio:3/4 } .ph-wide{ aspect-ratio:16/10 } .ph-sq{ aspect-ratio:1 }
+.ph-caption{
+  position:absolute; left:0; bottom:0; padding:.65rem 1.1rem;
+  font-size:.72rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase;
+  color:var(--porcelain); background:color-mix(in srgb, var(--graphite) 72%, transparent);
+  backdrop-filter:blur(6px);
+}
+
+/* ---------- RETRATO DEPTH-EFFECT (sujeito recortado salta da moldura) ---------- */
+.ph-depth{ position:relative; overflow:visible; background:transparent }
+.ph-depth .backdrop{
+  position:absolute; left:0; right:0; top:14%; bottom:0; z-index:0;
+  background:linear-gradient(168deg, var(--forest) 0%, var(--forest-deep) 78%);
+  border:1px solid color-mix(in srgb, var(--champagne) 42%, transparent);
+}
+.ph-depth .backdrop::after{
+  content:''; position:absolute; inset:.9rem; z-index:1;
+  border:1px solid color-mix(in srgb, var(--champagne-2) 22%, transparent);
+  pointer-events:none;
+}
+.ph-depth.light .backdrop{
+  background:linear-gradient(168deg, var(--paper) 0%, #E2D9C6 85%);
+  border-color:color-mix(in srgb, var(--champagne) 55%, transparent);
+}
+.ph-depth img{
+  position:relative; z-index:2; width:100%; height:auto; display:block;
+  filter:drop-shadow(0 26px 44px rgb(23 27 25 / .42));
+  transition:transform .9s var(--ease-lux);
+}
+.ph-depth:hover img{ transform:translateY(-8px) }
+.ph-depth .ph-caption{ z-index:3 }
+@media (prefers-reduced-motion:reduce){ .ph-depth img{ transition:none } }
+
+/* Upgrade premium das fotos emolduradas (profundidade em camadas, site inteiro) */
+.ph-frame{
+  box-shadow:
+    0 1px 2px rgb(23 27 25 / .18),
+    0 14px 28px -8px rgb(23 27 25 / .28),
+    0 42px 90px -24px rgb(23 27 25 / .40);
+}
+.ph-frame::after{
+  content:''; position:absolute; inset:0; pointer-events:none;
+  border:1px solid color-mix(in srgb, var(--champagne) 26%, transparent);
+  box-shadow:inset 0 0 60px rgb(23 27 25 / .12);
+}
+
+/* ---------- ESPAÇO RESERVADO (foto em produção — slot nomeado, nunca "quebrado") ---------- */
+.ph-vazio{
+  background:
+    repeating-linear-gradient(45deg, transparent 0 14px, color-mix(in srgb, var(--champagne) 7%, transparent) 14px 15px),
+    var(--paper);
+  display:grid; place-items:center; min-height:220px;
+}
+.ph-vazio::before{
+  content:''; position:absolute; inset:.9rem;
+  border:1px solid color-mix(in srgb, var(--champagne) 40%, transparent);
+  pointer-events:none;
+}
+.ph-vazio::after{
+  content:attr(data-rotulo) '\A Fotografia em produção';
+  white-space:pre-line; text-align:center; padding:1rem;
+  font-family:var(--serif); font-style:italic; font-size:1.05rem; line-height:1.9;
+  color:color-mix(in srgb, var(--stone) 85%, transparent);
+}
+.ph-vazio .ph-caption{ display:none }
+.dark .ph-vazio{ background:
+  repeating-linear-gradient(45deg, transparent 0 14px, color-mix(in srgb, var(--champagne-2) 8%, transparent) 14px 15px),
+  color-mix(in srgb, var(--porcelain) 4%, transparent) }
+.dark .ph-vazio::after{ color:color-mix(in srgb, var(--porcelain) 45%, transparent) }
+
+/* ---------- CARDS DE ESPECIALIDADE (linha editorial, não card genérico) ---------- */
+.spec-row{
+  display:flex; align-items:baseline; justify-content:space-between; gap:1.5rem;
+  padding:1.6rem .25rem; border-bottom:var(--hairline);
+  transition:all .4s var(--ease-lux);
+}
+.spec-row:first-child{ border-top:var(--hairline) }
+.spec-row h4{ font-family:var(--serif); font-weight:420; font-size:clamp(1.25rem,2.2vw,1.8rem); transition:all .4s }
+.spec-row .tag{ font-size:.72rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--stone) }
+.spec-row .arr{ font-size:1.3rem; color:var(--champagne); opacity:0; transform:translateX(-10px); transition:all .4s var(--ease-lux) }
+.spec-row:hover{ padding-left:1rem }
+.spec-row:hover h4{ color:var(--champagne); font-style:italic }
+.spec-row:hover .arr{ opacity:1; transform:none }
+
+/* ---------- FORM DE LEAD ---------- */
+.lead-form{ display:grid; gap:1.3rem }
+.field label{
+  display:block; font-size:.72rem; font-weight:600; letter-spacing:.26em;
+  text-transform:uppercase; color:var(--stone); margin-bottom:.5rem;
+}
+.field input,.field select,.field textarea{
+  width:100%; font:inherit; color:inherit; background:transparent;
+  border:0; border-bottom:1px solid color-mix(in srgb, var(--ink) 30%, transparent);
+  padding:.65rem .1rem; border-radius:0; transition:border-color .35s;
+}
+.dark .field input,.dark .field select,.dark .field textarea{
+  border-bottom-color:color-mix(in srgb, var(--porcelain) 30%, transparent);
+}
+.field input:focus,.field select:focus,.field textarea:focus{ outline:none; border-bottom-color:var(--champagne) }
+.field select option{ color:var(--ink); background:var(--ivory) }
+
+/* ---------- WHATSAPP FLUTUANTE (elegante, na paleta) ---------- */
+.wa-float{
+  position:fixed; right:1.4rem; bottom:1.4rem; z-index:80;
+  display:flex; align-items:center; gap:.7rem;
+  background:var(--forest); color:var(--porcelain);
+  padding:.9rem 1.4rem; border-radius:999px;
+  font-size:.82rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  box-shadow:0 18px 45px -12px rgb(23 27 25 / .5);
+  border:1px solid color-mix(in srgb, var(--champagne) 50%, transparent);
+  transition:all .45s var(--ease-lux);
+}
+.wa-float:hover{ background:var(--champagne); color:var(--graphite); transform:translateY(-3px) }
+.wa-float svg{ width:18px; height:18px; fill:currentColor }
+.wa-float .lbl{ display:none }
+@media (min-width:700px){ .wa-float .lbl{ display:inline } }
+
+/* ---------- MAPA-RESUMO (organograma clicável, injetado pelo main.js) ---------- */
+.mapa-btn{
+  position:fixed; left:1.4rem; bottom:1.4rem; z-index:80;
+  display:flex; align-items:center; gap:.7rem;
+  background:var(--graphite); color:var(--porcelain);
+  padding:.9rem 1.4rem; border-radius:999px;
+  font-size:.82rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  box-shadow:0 18px 45px -12px rgb(23 27 25 / .5);
+  border:1px solid color-mix(in srgb, var(--champagne) 50%, transparent);
+  transition:all .45s var(--ease-lux); cursor:pointer;
+}
+.mapa-btn:hover{ background:var(--champagne); color:var(--graphite); transform:translateY(-3px) }
+.mapa-btn svg{ width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:1.6 }
+.mapa-btn .lbl{ display:none }
+@media (min-width:700px){ .mapa-btn .lbl{ display:inline } }
+
+.mapa{
+  position:fixed; inset:0; z-index:120; background:color-mix(in srgb, var(--forest-deep) 96%, transparent);
+  backdrop-filter:blur(10px); overflow-y:auto; overscroll-behavior:contain;
+  opacity:0; visibility:hidden; transition:all .5s var(--ease-lux);
+}
+.mapa.open{ opacity:1; visibility:visible }
+.mapa-inner{ max-width:1440px; margin-inline:auto; padding:5.5rem var(--gutter) 4rem }
+.mapa-close{
+  position:fixed; top:1.3rem; right:1.4rem; z-index:125; width:48px; height:48px;
+  display:grid; place-items:center; border-radius:50%;
+  border:1px solid color-mix(in srgb, var(--champagne-2) 40%, transparent);
+  color:var(--porcelain); font-size:1.1rem; cursor:pointer; transition:all .4s;
+  background:color-mix(in srgb, var(--graphite) 60%, transparent);
+}
+.mapa-close:hover{ background:var(--champagne); color:var(--graphite) }
+
+.mapa h2{ color:var(--porcelain); font-size:clamp(1.7rem,3.4vw,2.8rem); max-width:20ch }
+.mapa h2 em{ color:var(--champagne-2) }
+.mapa .overline{ color:color-mix(in srgb, var(--champagne-2) 85%, transparent) }
+
+/* fileira "conheça" (nós de topo) */
+.mapa-topo{ display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.6rem }
+.mapa-topo a{
+  font-size:.78rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+  color:color-mix(in srgb, var(--porcelain) 85%, transparent);
+  border:1px solid color-mix(in srgb, var(--porcelain) 28%, transparent);
+  padding:.65rem 1.2rem; transition:all .35s var(--ease-lux);
+}
+.mapa-topo a:hover{ border-color:var(--champagne-2); color:var(--champagne-2) }
+
+/* árvore do organograma */
+.mapa-tree{
+  margin-top:2.8rem; padding-top:2.2rem;
+  border-top:1px solid color-mix(in srgb, var(--champagne-2) 30%, transparent);
+  display:grid; gap:2.2rem;
+  grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+}
+.mapa-grupo{ position:relative; padding-left:1.4rem }
+.mapa-grupo::before{ /* tronco vertical do grupo */
+  content:''; position:absolute; left:0; top:.4rem; bottom:.6rem;
+  width:1px; background:color-mix(in srgb, var(--champagne-2) 35%, transparent);
+}
+.mapa-grupo h3{
+  font-family:var(--serif); font-weight:430; font-size:1.3rem; color:var(--porcelain);
+  display:flex; align-items:baseline; gap:.6rem; margin-bottom:1.1rem;
+}
+.mapa-grupo h3 small{
+  font-family:var(--sans); font-size:.68rem; font-weight:600; letter-spacing:.2em;
+  color:color-mix(in srgb, var(--champagne-2) 80%, transparent);
+}
+.mapa-grupo ul{ display:grid; gap:.5rem }
+.mapa-no{ position:relative }
+.mapa-no::before{ /* galho horizontal */
+  content:''; position:absolute; left:-1.4rem; top:50%; width:1rem; height:1px;
+  background:color-mix(in srgb, var(--champagne-2) 35%, transparent);
+}
+.mapa-no a{
+  display:flex; align-items:center; justify-content:space-between; gap:.8rem;
+  padding:.72rem 1rem; font-size:.92rem; color:color-mix(in srgb, var(--porcelain) 88%, transparent);
+  border:1px solid color-mix(in srgb, var(--porcelain) 16%, transparent);
+  background:color-mix(in srgb, var(--porcelain) 3%, transparent);
+  transition:all .35s var(--ease-lux);
+}
+.mapa-no a .arr{ opacity:0; transform:translateX(-6px); transition:all .35s var(--ease-lux); color:var(--champagne-2) }
+.mapa-no a:hover{ border-color:var(--champagne-2); color:var(--champagne-2); padding-left:1.2rem }
+.mapa-no a:hover .arr{ opacity:1; transform:none }
+
+/* ---------- FOOTER ---------- */
+.footer{ background:var(--graphite); color:color-mix(in srgb, var(--porcelain) 78%, transparent);
+  padding-block:var(--sp-6) var(--sp-4); font-size:.92rem }
+.footer .cols{ display:grid; gap:var(--sp-4) }
+@media (min-width:900px){ .footer .cols{ grid-template-columns:2fr 1fr 1fr 1.4fr } }
+.footer h5{ font-size:.72rem; font-weight:600; letter-spacing:.3em; text-transform:uppercase;
+  color:var(--champagne-2); margin-bottom:1.1rem }
+.footer a:hover{ color:var(--champagne-2) }
+.footer .legal{ margin-top:var(--sp-5); padding-top:var(--sp-3);
+  border-top:1px solid color-mix(in srgb, var(--porcelain) 12%, transparent);
+  font-size:.78rem; color:color-mix(in srgb, var(--porcelain) 45%, transparent);
+  display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between }
+
+/* ---------- REVEALS (JS adiciona .in) ---------- */
+.rv{ opacity:0; transform:translateY(34px); transition:opacity var(--dur) var(--ease-lux), transform var(--dur) var(--ease-lux) }
+.rv.in{ opacity:1; transform:none }
+.rv-d1{ transition-delay:.12s } .rv-d2{ transition-delay:.24s } .rv-d3{ transition-delay:.36s } .rv-d4{ transition-delay:.48s }
+@media (prefers-reduced-motion:reduce){
+  .rv{ opacity:1; transform:none; transition:none }
+  .ph img{ transition:none }
+}
+
+/* ---------- UTILIDADES ---------- */
+.tc{ text-align:center }
+.mw{ max-width:var(--measure) } .mx{ margin-inline:auto }
+.mt-2{ margin-top:var(--sp-2) } .mt-3{ margin-top:var(--sp-3) } .mt-4{ margin-top:var(--sp-4) } .mt-5{ margin-top:var(--sp-5) }
+.gold{ color:var(--champagne) }
+.dark .gold{ color:var(--champagne-2) }
+.small{ font-size:var(--t-small); color:var(--stone) }
+.disclaimer{ font-size:.78rem; line-height:1.6; color:var(--stone); max-width:52ch }
+.dark .disclaimer{ color:color-mix(in srgb, var(--porcelain) 45%, transparent) }
+
+/* ============================================================
+   ELEVAÇÃO DE DIREÇÃO DE ARTE — 2026-07-02 (claude-design pass)
+   Refinos que herdam pra todas as páginas. Sem quebrar identidade.
+   ============================================================ */
+
+/* Botões: varredura champanhe no hover (em vez de troca seca de cor) */
+.btn{ isolation:isolate }
+.btn-gold::before,
+.btn-ghost::before{
+  content:''; position:absolute; inset:0; z-index:-1;
+  transform:translateX(-101%); transition:transform .55s var(--ease-lux);
+}
+.btn-gold{ background:var(--champagne); color:var(--graphite) }
+.btn-gold::before{ background:var(--champagne-2) }
+.btn-gold:hover{ background:var(--champagne) }        /* base; a varredura cobre */
+.btn-gold:hover::before{ transform:none }
+.btn-ghost::before{ background:var(--champagne) }
+.btn-ghost:hover{ color:var(--graphite); box-shadow:inset 0 0 0 1px var(--champagne) }
+.btn-ghost:hover::before{ transform:none }
+.dark .btn-ghost:hover{ color:var(--graphite) }
+.dark .btn-ghost::before{ background:var(--champagne-2) }
+
+/* Link-régua: sublinhado champanhe que cresce da esquerda */
+.btn-line{ position:relative; border-bottom-color:transparent !important }
+.btn-line::after{
+  content:''; position:absolute; left:0; bottom:0; height:1px; width:100%;
+  background:var(--champagne); transform:scaleX(0); transform-origin:left;
+  transition:transform .45s var(--ease-lux);
+}
+.btn-line:hover::after{ transform:scaleX(1) }
+.dark .btn-line::after{ background:var(--champagne-2) }
+
+/* Fotos emolduradas: profundidade em camadas + leve realce no topo */
+.ph-frame{
+  box-shadow:
+    0 1px 1px rgb(23 27 25 / .10),
+    0 8px 18px -8px rgb(23 27 25 / .22),
+    0 34px 70px -28px rgb(23 27 25 / .42);
+}
+
+/* Numeral de seção: um respiro a mais de presença editorial */
+.sec-num{ letter-spacing:-.02em; opacity:.92 }
+
+/* Foco visível acessível e na marca (nunca o azul do sistema) */
+:where(a,button,summary,input,select,textarea,[tabindex]):focus-visible{
+  outline:2px solid var(--champagne);
+  outline-offset:3px; border-radius:1px;
+}
+
+/* Barra de rolagem discreta na paleta */
+@supports (scrollbar-color: auto){
+  html{ scrollbar-color: color-mix(in srgb, var(--champagne) 55%, transparent) transparent; scrollbar-width:thin }
+}
+::-webkit-scrollbar{ width:11px; height:11px }
+::-webkit-scrollbar-thumb{
+  background:color-mix(in srgb, var(--champagne) 55%, transparent);
+  border:3px solid var(--ivory); border-radius:999px;
+}
+::-webkit-scrollbar-thumb:hover{ background:var(--champagne) }
+::-webkit-scrollbar-track{ background:transparent }
+
+/* Reveal de imagem tipo "cortina" — opt-in com .rv-img (não muda o resto) */
+.rv-img{ clip-path:inset(0 0 100% 0); transition:clip-path 1.1s var(--ease-lux) }
+.rv-img.in{ clip-path:inset(0 0 0 0) }
+@media (prefers-reduced-motion:reduce){ .rv-img{ clip-path:none } }
+
+/* Primeira letra da seção-tese: capitular sutil (só onde marcada) */
+.lead-drop::first-letter{
+  font-family:var(--serif); font-weight:400; float:left; line-height:.82;
+  font-size:3.1em; padding:.06em .12em 0 0; color:var(--champagne);
+}
+
+/* ===================== LOGOMARCA OFICIAL (símbolo coral + wordmark) ===================== */
+.nav-logo{ display:flex; align-items:center; gap:.72rem }
+.nav-logo .lg-sym{ height:2.55rem; width:auto; display:block; flex:none }
+.nav-logo .lg-tx{ display:flex; flex-direction:column; gap:.14rem }
+.nav-logo .lg-top{ font-family:var(--serif); font-size:.58rem; font-weight:500; letter-spacing:.32em;
+  text-transform:uppercase; color:color-mix(in srgb, var(--porcelain) 82%, transparent) }
+.nav-logo .lg-main{ font-family:var(--serif); font-size:1.14rem; font-weight:400; letter-spacing:.15em;
+  text-transform:uppercase; line-height:1 }
+.nav-logo small{ margin-top:.16rem }
+.footer .nav-logo .lg-sym{ height:3.1rem }
+@media (max-width:480px){ .nav-logo .lg-sym{ height:2.2rem } .nav-logo .lg-main{ font-size:1rem } }
+.nav-logo small{ white-space:nowrap }
+.nav-logo .lg-sym{ height:2.8rem }
+.nav-links a{ white-space:nowrap }
+@media (min-width:1100px) and (max-width:1330px){ .nav-links{ gap:1.5rem } }
+.nav-cta{ white-space:nowrap }
+@media (min-width:1100px) and (max-width:1330px){
+  .nav-links{ gap:1.1rem; font-size:.76rem; letter-spacing:.11em }
+  .nav-logo small{ display:none }
+}
+@media (max-width:640px){
+  .nav .nav-logo small{ display:none }
+  .nav .nav-logo .lg-sym{ height:2.15rem }
+  .nav .nav-logo .lg-main{ font-size:.98rem }
+}

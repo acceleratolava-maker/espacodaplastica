@@ -1,0 +1,1053 @@
+[
+  {
+    "slug": "protese-de-mama",
+    "nome": "Prótese de Mama",
+    "grupo": "Mamas",
+    "cirurgico": true,
+    "resumo": "A prótese de mama é a cirurgia de inserção de implantes para aumentar ou restaurar o volume dos seios. O planejamento considera a anatomia, a proporção do tronco e o desejo de cada paciente — do formato ao posicionamento do implante. Também integra a reconstrução mamária após mastectomia.",
+    "beneficios": [
+      "Aumentar o volume das mamas em proporção ao corpo",
+      "Restaurar o volume perdido após gravidez, amamentação ou emagrecimento",
+      "Buscar maior simetria entre as mamas",
+      "Integrar a reconstrução mamária após mastectomia",
+      "Planejar formato e projeção conforme a anatomia de cada paciente"
+    ],
+    "faq": [
+      {
+        "q": "Qual tipo de implante é utilizado?",
+        "a": "Existem implantes de diferentes formatos, perfis e superfícies. A escolha é feita em conjunto com o cirurgião durante a avaliação, considerando a anatomia, o tecido mamário e o objetivo da paciente."
+      },
+      {
+        "q": "A cirurgia deixa cicatriz?",
+        "a": "Sim — toda cirurgia deixa cicatriz. A localização depende da via de acesso definida no planejamento, e o cirurgião orienta os cuidados que favorecem uma boa cicatrização."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "Varia de pessoa para pessoa. Em geral, recomenda-se evitar esforços nas primeiras semanas, com retorno gradual às atividades conforme as orientações do cirurgião nas consultas de acompanhamento."
+      },
+      {
+        "q": "A prótese precisa ser trocada depois de um tempo?",
+        "a": "Implantes não têm um prazo fixo obrigatório de troca, mas exigem acompanhamento médico periódico e exames de imagem conforme a orientação do cirurgião."
+      },
+      {
+        "q": "É possível amamentar depois da cirurgia?",
+        "a": "Na maioria dos casos a amamentação é possível, mas cada situação deve ser avaliada individualmente com o cirurgião, considerando a técnica e a via de acesso utilizadas."
+      },
+      {
+        "q": "Como sei se essa é a cirurgia certa para mim?",
+        "a": "Somente a avaliação individual com um cirurgião plástico pode indicar o procedimento adequado, após exame físico, análise do histórico de saúde e uma conversa franca sobre expectativas."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Prótese de Mama."
+  },
+  {
+    "slug": "mamoplastia",
+    "nome": "Mamoplastia",
+    "grupo": "Mamas",
+    "cirurgico": true,
+    "resumo": "Mamoplastia é o nome dado às cirurgias do tecido mamário — de aumento, de redução ou de levantamento (mastopexia). O objetivo é trabalhar proporção, posição e forma das mamas, inclusive após gravidez ou variações de peso. Cada técnica nasce da avaliação individual.",
+    "beneficios": [
+      "Ajustar o volume das mamas — para mais ou para menos — conforme a indicação",
+      "Reposicionar mamas com queda (ptose) após gravidez ou perda de peso",
+      "Aliviar desconfortos físicos associados a mamas muito volumosas",
+      "Buscar proporção entre as mamas e a silhueta",
+      "Combinar técnicas — redução, levantamento, implante — quando indicado"
+    ],
+    "faq": [
+      {
+        "q": "Qual a diferença entre mamoplastia e prótese de mama?",
+        "a": "A prótese de mama trata do volume por meio de implantes; a mamoplastia abrange também a redução e o levantamento do tecido mamário. Em alguns casos, as técnicas se combinam — a indicação é definida na avaliação."
+      },
+      {
+        "q": "A redução de mama pode ajudar nas dores nas costas?",
+        "a": "Mamas muito volumosas podem se associar a desconforto na coluna, nos ombros e na postura. A cirurgia pode ser indicada nesses casos, sempre após avaliação médica individual."
+      },
+      {
+        "q": "Como ficam as cicatrizes?",
+        "a": "O desenho depende da técnica: pode ser ao redor da aréola, vertical ou em T invertido. O cirurgião explica, no planejamento, o padrão esperado para o seu caso."
+      },
+      {
+        "q": "É possível amamentar depois de uma mamoplastia?",
+        "a": "Depende da técnica utilizada e de cada organismo. Essa questão deve ser conversada na avaliação, especialmente se houver planos de gravidez futura."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "Em geral envolve repouso relativo nas primeiras semanas, uso de sutiã cirúrgico e retorno gradual às atividades, conforme as orientações do cirurgião."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Mamoplastia."
+  },
+  {
+    "slug": "ginecomastia",
+    "nome": "Ginecomastia",
+    "grupo": "Mamas",
+    "cirurgico": true,
+    "resumo": "A cirurgia de ginecomastia reduz o tecido mamário masculino aumentado — condição que pode ter origem hormonal, medicamentosa ou associada a outras condições de saúde. O procedimento remove o excesso de tecido e gordura para tratar o contorno do tórax.",
+    "beneficios": [
+      "Reduzir o tecido mamário masculino aumentado",
+      "Tratar o contorno do tórax removendo excesso de tecido e gordura",
+      "Investigar as causas do quadro antes da indicação cirúrgica",
+      "Planejar incisões em posições discretas"
+    ],
+    "faq": [
+      {
+        "q": "O que causa a ginecomastia?",
+        "a": "Desequilíbrios hormonais, uso de certos medicamentos e algumas condições de saúde estão entre as causas possíveis. A investigação da origem do quadro faz parte da avaliação médica."
+      },
+      {
+        "q": "A cirurgia é sempre necessária?",
+        "a": "Não. Alguns quadros regridem quando a causa de base é tratada. A cirurgia é considerada quando o tecido persiste e incomoda, após avaliação individual."
+      },
+      {
+        "q": "O tecido pode voltar a crescer?",
+        "a": "Quando a causa de base é identificada e controlada, a recorrência tende a ser incomum — por isso a investigação prévia é tão importante."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "Em geral utiliza-se colete ou malha de compressão nas primeiras semanas, com retorno gradual às atividades e aos treinos conforme a liberação do cirurgião."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Ginecomastia."
+  },
+  {
+    "slug": "abdominoplastia",
+    "nome": "Abdominoplastia",
+    "grupo": "Corpo",
+    "cirurgico": true,
+    "resumo": "A abdominoplastia remove o excesso de pele e gordura do abdome e trata a musculatura da parede abdominal, com possível reposicionamento do umbigo. É frequentemente procurada após gestações ou grandes variações de peso — da miniabdominoplastia à abdominoplastia completa, a técnica é definida caso a caso.",
+    "beneficios": [
+      "Remover o excesso de pele e gordura da região abdominal",
+      "Tratar a flacidez e a diástase da musculatura abdominal, quando presente",
+      "Redefinir o contorno do abdome após gestações ou perda de peso",
+      "Planejar a cicatriz na linha do biquíni",
+      "Possibilidade de combinação com outros procedimentos, quando indicado"
+    ],
+    "faq": [
+      {
+        "q": "Qual a diferença entre abdominoplastia completa e miniabdominoplastia?",
+        "a": "A abdominoplastia completa envolve incisão de quadril a quadril, tratamento de toda a área abdominal e possível reposicionamento do umbigo. A miniabdominoplastia é menos extensa e trata a região abaixo do umbigo. A indicação depende do exame físico."
+      },
+      {
+        "q": "Quanto tempo dura a recuperação?",
+        "a": "Em geral, a recuperação inicial leva de 2 a 4 semanas, com retorno gradual às atividades; a recuperação completa pode levar de 3 a 6 meses. Os prazos variam caso a caso."
+      },
+      {
+        "q": "Quais são os riscos?",
+        "a": "Como toda cirurgia, envolve riscos — entre eles infecção, sangramento, seromas, alterações de cicatrização e assimetrias. Eles são discutidos abertamente na consulta, junto às medidas de prevenção adotadas."
+      },
+      {
+        "q": "Como fica a cicatriz?",
+        "a": "A cicatriz é planejada para se posicionar na linha do biquíni, em região habitualmente coberta pela roupa íntima. A extensão depende da quantidade de pele a ser tratada."
+      },
+      {
+        "q": "Posso combinar com lipoaspiração ou cirurgia das mamas?",
+        "a": "Em casos selecionados, a abdominoplastia pode ser associada à lipoaspiração ou a cirurgias das mamas — o chamado mommy makeover. A combinação depende de critérios de segurança avaliados individualmente."
+      },
+      {
+        "q": "A abdominoplastia substitui o emagrecimento?",
+        "a": "Não. A cirurgia trata pele, gordura localizada e musculatura — não é um método de perda de peso. O ideal é estar com o peso estável antes do procedimento."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Abdominoplastia."
+  },
+  {
+    "slug": "lipoescultura",
+    "nome": "Lipoescultura",
+    "grupo": "Corpo",
+    "cirurgico": true,
+    "resumo": "A lipoescultura remodela áreas específicas do corpo: remove o excesso de gordura localizada e pode realocá-la para regiões que pedem volume, como os glúteos. É um procedimento de refinamento do contorno — não um método de perda de peso.",
+    "beneficios": [
+      "Tratar gordura localizada resistente a dieta e exercício",
+      "Trabalhar o contorno de abdome, flancos, costas e coxas",
+      "Realocar gordura do próprio corpo para áreas que pedem volume, quando indicado",
+      "Buscar uma silhueta mais definida e proporcional"
+    ],
+    "faq": [
+      {
+        "q": "Qual a diferença entre lipoaspiração e lipoescultura?",
+        "a": "A lipoaspiração remove a gordura localizada; a lipoescultura acrescenta a possibilidade de enxertar essa gordura em outras regiões, trabalhando o contorno do corpo como um todo."
+      },
+      {
+        "q": "Serve para emagrecer?",
+        "a": "Não. O procedimento trata o contorno e a gordura localizada — não substitui dieta, exercício nem tratamentos para perda de peso. O ideal é estar com o peso estável."
+      },
+      {
+        "q": "A gordura pode voltar?",
+        "a": "As células removidas não retornam, mas as remanescentes podem aumentar de volume com o ganho de peso. Hábitos saudáveis ajudam a manter o contorno alcançado."
+      },
+      {
+        "q": "Como são a anestesia e a internação?",
+        "a": "Dependem da extensão do procedimento e da avaliação pré-anestésica. O formato é definido pelo cirurgião em conjunto com a equipe de anestesia."
+      },
+      {
+        "q": "Preciso usar malha de compressão?",
+        "a": "Em geral, sim. O uso de malha e a drenagem linfática costumam fazer parte das orientações pós-operatórias, conforme a prescrição do cirurgião."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Lipoescultura."
+  },
+  {
+    "slug": "protese-de-gluteo",
+    "nome": "Prótese de Glúteo",
+    "grupo": "Corpo",
+    "cirurgico": true,
+    "resumo": "A prótese de glúteo utiliza implantes específicos para aumentar e dar forma à região glútea, trabalhando a proporção entre tronco e quadril. Costuma ser considerada quando os exercícios não alcançam o volume desejado ou quando não há gordura suficiente para enxertia.",
+    "beneficios": [
+      "Aumentar o volume dos glúteos com implantes específicos para a região",
+      "Trabalhar a proporção entre cintura, quadril e glúteos",
+      "Oferecer alternativa quando não há gordura disponível para enxertia",
+      "Planejar o posicionamento do implante conforme a anatomia"
+    ],
+    "faq": [
+      {
+        "q": "Prótese ou enxerto de gordura: qual escolher?",
+        "a": "São caminhos diferentes: o implante oferece um volume definido; a enxertia utiliza gordura do próprio corpo. A escolha depende da anatomia, da disponibilidade de gordura e do objetivo — e é definida na avaliação."
+      },
+      {
+        "q": "Posso sentar depois da cirurgia?",
+        "a": "Nos primeiros dias há restrições de posição para proteger a região operada. O cirurgião orienta a progressão segura para sentar, dirigir e voltar a treinar."
+      },
+      {
+        "q": "Onde fica a cicatriz?",
+        "a": "A incisão costuma ser posicionada no sulco entre os glúteos, em área discreta. Os detalhes são explicados no planejamento cirúrgico."
+      },
+      {
+        "q": "Quando posso voltar aos exercícios?",
+        "a": "As atividades físicas intensas costumam ser liberadas de forma gradual, em geral após algumas semanas, conforme a evolução individual da recuperação."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Prótese de Glúteo."
+  },
+  {
+    "slug": "protese-de-panturrilha",
+    "nome": "Prótese de Panturrilha",
+    "grupo": "Corpo",
+    "cirurgico": true,
+    "resumo": "A prótese de panturrilha insere um implante de silicone para dar volume e definição à região — uma alternativa para quem não alcança esse desenvolvimento com exercícios. É realizada por homens e mulheres, com incisão discreta na dobra atrás do joelho.",
+    "beneficios": [
+      "Aumentar o volume e a definição das panturrilhas",
+      "Oferecer alternativa quando o treino específico não traz o volume desejado",
+      "Atender tanto homens quanto mulheres",
+      "Posicionar a incisão na dobra atrás do joelho, em área discreta",
+      "Cirurgia habitualmente de curta duração"
+    ],
+    "faq": [
+      {
+        "q": "Quanto tempo dura a cirurgia?",
+        "a": "Em geral, entre uma e duas horas, podendo variar conforme o caso e o planejamento definido pelo cirurgião."
+      },
+      {
+        "q": "Preciso ficar internado?",
+        "a": "Muitos casos são conduzidos em regime ambulatorial ou de curta permanência. A definição é individual, feita com o cirurgião e a equipe de anestesia."
+      },
+      {
+        "q": "A cicatriz fica visível?",
+        "a": "A incisão é posicionada na dobra natural atrás do joelho, região onde a cicatriz tende a ficar discreta com a maturação."
+      },
+      {
+        "q": "Quando posso voltar a treinar pernas?",
+        "a": "O retorno é gradual: caminhadas leves primeiro; treinos intensos de membros inferiores apenas após a liberação do cirurgião."
+      },
+      {
+        "q": "Serve para corrigir assimetrias entre as pernas?",
+        "a": "Em casos selecionados, sim — o implante pode ser utilizado para tratar diferenças de volume entre as panturrilhas, após avaliação individual."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Prótese de Panturrilha."
+  },
+  {
+    "slug": "proteses-e-contorno-corporal",
+    "nome": "Próteses e Contorno Corporal",
+    "grupo": "Corpo",
+    "cirurgico": true,
+    "resumo": "Conjunto de procedimentos que modelam regiões específicas do corpo — como braços, abdome e outras áreas — combinando remoção de excessos, implantes e reposicionamento de tecidos. O plano é desenhado sob medida, a partir das queixas e do exame de cada paciente.",
+    "beneficios": [
+      "Tratar regiões específicas do corpo com a técnica adequada a cada caso",
+      "Abordar flacidez e excessos localizados em braços, abdome e outras áreas",
+      "Combinar procedimentos complementares num mesmo planejamento, quando seguro",
+      "Construir um plano cirúrgico individual, definido em avaliação"
+    ],
+    "faq": [
+      {
+        "q": "Quais áreas podem ser tratadas?",
+        "a": "Braços, abdome, coxas, flancos e outras regiões, conforme a queixa. A avaliação define quais técnicas se aplicam ao seu caso."
+      },
+      {
+        "q": "Posso fazer mais de um procedimento de uma vez?",
+        "a": "Em casos selecionados, sim. A combinação depende de critérios de segurança avaliados individualmente, como o tempo cirúrgico total e as condições de saúde."
+      },
+      {
+        "q": "Como escolher o procedimento certo?",
+        "a": "Essa é justamente a função da avaliação: examinar, ouvir e propor o caminho tecnicamente adequado. A escolha não é de catálogo — nasce do exame individual."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "Varia conforme os procedimentos realizados e a extensão do plano. As orientações de repouso, malhas e retorno às atividades são detalhadas caso a caso."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Próteses e Contorno Corporal."
+  },
+  {
+    "slug": "pos-bariatrica",
+    "nome": "Cirurgia Pós-Bariátrica",
+    "grupo": "Corpo",
+    "cirurgico": true,
+    "resumo": "Após uma grande perda de peso — por cirurgia bariátrica ou por dieta — a pele nem sempre acompanha o novo corpo. A cirurgia pós-bariátrica reúne procedimentos para remover excessos de pele e tecido em áreas como abdome, braços, coxas e peito, num planejamento por etapas.",
+    "beneficios": [
+      "Remover excessos de pele após grande perda de peso",
+      "Tratar abdome, braços, coxas, mamas e outras regiões, conforme o caso",
+      "Abordar desconfortos funcionais associados ao excesso de pele",
+      "Planejar as cirurgias em etapas, priorizando a segurança"
+    ],
+    "faq": [
+      {
+        "q": "Quanto tempo após a bariátrica posso operar?",
+        "a": "Em geral, aguarda-se a estabilização do peso e das condições nutricionais. A liberação é individual e pode envolver a equipe que acompanha o paciente desde a bariátrica."
+      },
+      {
+        "q": "Dá para operar todas as áreas de uma vez?",
+        "a": "Nem sempre. Com frequência o plano é dividido em etapas, respeitando limites seguros de tempo cirúrgico e de recuperação entre uma cirurgia e outra."
+      },
+      {
+        "q": "Preciso de exames especiais?",
+        "a": "Sim — avaliação clínica, laboratorial e, com frequência, nutricional, já que deficiências de vitaminas e proteínas interferem na cicatrização."
+      },
+      {
+        "q": "Como ficam as cicatrizes?",
+        "a": "São cirurgias de remoção de pele e, portanto, com cicatrizes mais extensas, planejadas para posições estratégicas. Esse ponto é discutido com transparência na avaliação."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Cirurgia Pós-Bariátrica."
+  },
+  {
+    "slug": "correcao-de-cicatriz",
+    "nome": "Correção de Cicatriz",
+    "grupo": "Corpo",
+    "cirurgico": true,
+    "resumo": "A correção de cicatriz reúne técnicas cirúrgicas e complementares para tornar cicatrizes menos perceptíveis — incluindo as alargadas, aderidas, hipertróficas ou queloideanas. Também abrange a remoção de pequenas lesões de pele, como cistos, quando causam dor ou incômodo.",
+    "beneficios": [
+      "Tratar cicatrizes alargadas, aderidas, hipertróficas ou queloides",
+      "Remover pequenas lesões de pele, como cistos, quando indicado",
+      "Realizar procedimentos menores com anestesia local, na maioria dos casos",
+      "Planejar a abordagem conforme o tipo e a localização da cicatriz"
+    ],
+    "faq": [
+      {
+        "q": "É possível apagar completamente uma cicatriz?",
+        "a": "Não — nenhuma técnica apaga uma cicatriz por completo. O objetivo é torná-la menos perceptível, e essa expectativa é alinhada com clareza na avaliação."
+      },
+      {
+        "q": "Quais técnicas são utilizadas?",
+        "a": "Da revisão cirúrgica a recursos complementares, como lasers e terapias com silicone ou compressão. A combinação depende do tipo de cicatriz e da fase em que ela se encontra."
+      },
+      {
+        "q": "E no caso de queloides?",
+        "a": "Queloides pedem abordagem específica e acompanhamento prolongado, pois têm tendência à recidiva. O plano é individual e discutido com transparência."
+      },
+      {
+        "q": "A remoção de cisto é cirúrgica?",
+        "a": "Sim — em geral um procedimento menor, com anestesia local, indicado quando o cisto causa dor, incômodo estético ou apresenta risco de infecção."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Correção de Cicatriz."
+  },
+  {
+    "slug": "tratamento-de-queimaduras",
+    "nome": "Tratamento de Queimaduras",
+    "grupo": "Corpo",
+    "cirurgico": true,
+    "resumo": "O tratamento das sequelas de queimaduras combina recursos reconstrutivos e regenerativos: enxertos de pele para áreas danificadas, laser para melhorar a textura das cicatrizes e terapias com silicone e compressão para prevenir cicatrizes hipertróficas e queloides.",
+    "beneficios": [
+      "Reconstruir áreas de pele danificadas, com enxertos quando indicado",
+      "Melhorar a textura e o aspecto das cicatrizes com recursos como o laser",
+      "Prevenir cicatrizes hipertróficas e queloides com silicone e compressão",
+      "Integrar fisioterapia precoce ao plano, quando indicada",
+      "Acompanhar de perto cada fase do tratamento"
+    ],
+    "faq": [
+      {
+        "q": "Quando devo começar a tratar as cicatrizes?",
+        "a": "O ideal é que o acompanhamento comece cedo: prevenir cicatrizes patológicas costuma ser mais eficaz do que tratá-las tardiamente. Cada fase da cicatrização tem recursos próprios."
+      },
+      {
+        "q": "Queimaduras antigas ainda têm tratamento?",
+        "a": "Sim. Sequelas antigas podem ser abordadas com cirurgia, enxertos, laser e outras técnicas, conforme a avaliação de cada caso."
+      },
+      {
+        "q": "O tratamento é feito em etapas?",
+        "a": "Com frequência, sim. O número de etapas depende da extensão e da profundidade das sequelas, com reavaliações ao longo do processo."
+      },
+      {
+        "q": "Fisioterapia faz parte do tratamento?",
+        "a": "Muitas vezes, sim — especialmente para preservar movimentos em áreas próximas a articulações. Quando necessário, o plano é multidisciplinar."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Tratamento de Queimaduras."
+  },
+  {
+    "slug": "rinoplastia",
+    "nome": "Rinoplastia",
+    "grupo": "Face",
+    "cirurgico": true,
+    "resumo": "A rinoplastia remodela o nariz para tratar queixas estéticas, funcionais ou ambas — de irregularidades no dorso a dificuldades respiratórias de origem estrutural. Por ocupar o centro do rosto, é uma cirurgia de planejamento minucioso e profundamente individual.",
+    "beneficios": [
+      "Tratar queixas estéticas do dorso, da ponta ou das asas nasais",
+      "Abordar dificuldades respiratórias de origem estrutural, quando presentes",
+      "Buscar equilíbrio entre o nariz e as demais características do rosto",
+      "Planejar a cirurgia conforme anatomia, pele e proporções faciais"
+    ],
+    "faq": [
+      {
+        "q": "Dá para tratar estética e respiração na mesma cirurgia?",
+        "a": "Em muitos casos, sim — as abordagens estética e funcional podem ser realizadas no mesmo ato cirúrgico. A avaliação define o que se aplica ao seu caso."
+      },
+      {
+        "q": "Existe idade mínima?",
+        "a": "Em geral, aguarda-se o final do desenvolvimento facial, normalmente a partir do fim da adolescência. Cada caso é avaliado individualmente."
+      },
+      {
+        "q": "Quanto tempo dura o inchaço?",
+        "a": "O inchaço reduz de forma gradual: boa parte cede nas primeiras semanas, mas o refinamento da forma final pode levar meses. O acompanhamento pós-operatório monitora essa evolução."
+      },
+      {
+        "q": "A cirurgia dói?",
+        "a": "O desconforto costuma ser controlado com a medicação prescrita. Sensação de congestão nasal nas primeiras semanas é comum e esperada."
+      },
+      {
+        "q": "A cicatriz fica aparente?",
+        "a": "Depende da via de acesso: na rinoplastia fechada, as incisões ficam dentro do nariz; na aberta, há uma pequena incisão na columela. O cirurgião explica a técnica indicada para o seu caso."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Rinoplastia."
+  },
+  {
+    "slug": "lifting-facial",
+    "nome": "Lifting Facial",
+    "grupo": "Face",
+    "cirurgico": true,
+    "resumo": "O lifting facial — ou ritidoplastia — é a cirurgia de rejuvenescimento do rosto: reposiciona os tecidos profundos e trata a flacidez da face e do pescoço, atenuando sulcos e trabalhando os contornos. Costuma ser considerado quando a flacidez incomoda mais do que as rugas superficiais.",
+    "beneficios": [
+      "Tratar a flacidez da face e do pescoço",
+      "Reposicionar os tecidos profundos, e não apenas a pele",
+      "Atenuar sulcos e o aspecto de cansaço associado à queda dos tecidos",
+      "Planejar cicatrizes em posições discretas, junto ao contorno da orelha",
+      "Possibilidade de associação a outros procedimentos faciais, quando indicado"
+    ],
+    "faq": [
+      {
+        "q": "Existe uma idade certa para o lifting?",
+        "a": "Não há idade fixa: a indicação depende do grau de flacidez e da queixa de cada pessoa. É mais comum a partir da meia-idade, sempre após avaliação individual."
+      },
+      {
+        "q": "O resultado dura para sempre?",
+        "a": "Nenhuma cirurgia interrompe o envelhecimento. O lifting trata o quadro atual; o processo natural do tempo segue seu curso depois, e isso é conversado com franqueza na consulta."
+      },
+      {
+        "q": "As cicatrizes ficam visíveis?",
+        "a": "As incisões são planejadas para acompanhar o contorno da orelha e o couro cabeludo, em áreas de menor evidência. A evolução da cicatriz é acompanhada no pós-operatório."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "Inchaço e roxos são esperados nas primeiras semanas. O retorno ao convívio social costuma ser gradual, conforme a orientação do cirurgião."
+      },
+      {
+        "q": "Pode ser combinado com a cirurgia das pálpebras?",
+        "a": "Em casos selecionados, sim — o lifting pode ser associado à blefaroplastia ou a outros procedimentos faciais, conforme o planejamento e os critérios de segurança."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Lifting Facial."
+  },
+  {
+    "slug": "blefaroplastia",
+    "nome": "Blefaroplastia",
+    "grupo": "Face",
+    "cirurgico": true,
+    "resumo": "A blefaroplastia trata o excesso de pele, músculo e bolsas de gordura das pálpebras — superiores, inferiores ou ambas. É indicada tanto por razões estéticas quanto quando o excesso de pele passa a interferir no campo de visão.",
+    "beneficios": [
+      "Remover o excesso de pele das pálpebras superiores",
+      "Tratar bolsas e flacidez das pálpebras inferiores",
+      "Abordar casos em que a pele em excesso interfere na visão",
+      "Suavizar o aspecto de cansaço na região dos olhos",
+      "Planejar cicatrizes nas dobras naturais das pálpebras"
+    ],
+    "faq": [
+      {
+        "q": "Superior, inferior ou as duas?",
+        "a": "Depende da queixa e do exame: o procedimento pode tratar apenas as pálpebras superiores, apenas as inferiores ou ambas, no mesmo ato cirúrgico."
+      },
+      {
+        "q": "Que anestesia é utilizada?",
+        "a": "Com frequência, anestesia local com sedação — mas a definição depende do caso e da avaliação pré-anestésica, feita em conjunto com a equipe."
+      },
+      {
+        "q": "A cicatriz fica visível?",
+        "a": "As incisões são posicionadas nas dobras naturais das pálpebras, onde tendem a ficar pouco perceptíveis com a maturação da cicatriz."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "Inchaço e roxos discretos são comuns nos primeiros dias. Compressas frias e cabeceira elevada costumam fazer parte das orientações pós-operatórias."
+      },
+      {
+        "q": "A blefaroplastia trata olheiras escuras?",
+        "a": "A cirurgia trata pele e bolsas; a coloração escura da pele tem outras causas e abordagens. A avaliação esclarece o que se aplica ao seu caso."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Blefaroplastia."
+  },
+  {
+    "slug": "otoplastia",
+    "nome": "Otoplastia",
+    "grupo": "Face",
+    "cirurgico": true,
+    "resumo": "A otoplastia ajusta a forma, a posição ou o tamanho das orelhas — mais frequentemente para corrigir orelhas proeminentes. Pode ser realizada em crianças a partir dos seis anos, quando a orelha já está formada, e também em adultos.",
+    "beneficios": [
+      "Corrigir orelhas proeminentes ou assimétricas",
+      "Ajustar a forma e a posição do pavilhão auricular",
+      "Atender crianças a partir dos seis anos e adultos",
+      "Posicionar a cicatriz atrás da orelha, em área discreta"
+    ],
+    "faq": [
+      {
+        "q": "Qual a idade certa para operar uma criança?",
+        "a": "A partir dos seis anos, quando a orelha já atingiu a maior parte do seu desenvolvimento. A decisão envolve a família e a avaliação do cirurgião — inclusive sobre o desejo da própria criança."
+      },
+      {
+        "q": "Que anestesia é utilizada?",
+        "a": "Depende da idade e do caso: pode ser local com sedação ou geral. A definição é feita com o cirurgião e a equipe de anestesia."
+      },
+      {
+        "q": "Onde fica a cicatriz?",
+        "a": "A incisão costuma ser posicionada atrás da orelha, em área naturalmente escondida."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "Em geral utiliza-se curativo nos primeiros dias e, depois, uma faixa de proteção — principalmente para dormir — pelo período orientado pelo cirurgião."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Otoplastia."
+  },
+  {
+    "slug": "mentoplastia",
+    "nome": "Mentoplastia",
+    "grupo": "Face",
+    "cirurgico": true,
+    "resumo": "A mentoplastia é a cirurgia plástica do queixo: pode aumentar a projeção com implantes ou reduzi-la por trabalho ósseo, buscando equilíbrio com as demais características do rosto. Também pode ter indicações funcionais, como ajustes relacionados à mordida.",
+    "beneficios": [
+      "Ajustar a projeção do queixo — para mais ou para menos",
+      "Buscar equilíbrio entre queixo, nariz e demais proporções faciais",
+      "Abordar questões funcionais associadas, quando presentes",
+      "Possibilidade de planejamento conjunto com a rinoplastia"
+    ],
+    "faq": [
+      {
+        "q": "A cirurgia usa implante ou trabalha o osso?",
+        "a": "Depende do caso: o aumento costuma utilizar implantes; a redução envolve trabalho ósseo. A escolha é feita na avaliação, muitas vezes com apoio de exames de imagem."
+      },
+      {
+        "q": "Onde fica a cicatriz?",
+        "a": "A via de acesso pode ser interna (pela boca) ou externa, sob o queixo. O cirurgião indica a opção mais adequada ao seu caso."
+      },
+      {
+        "q": "Pode ser feita junto com a rinoplastia?",
+        "a": "Sim. Como queixo e nariz definem juntos o perfil do rosto, os procedimentos podem ser planejados em conjunto quando há indicação."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "Inchaço local é esperado nos primeiros dias, com retorno gradual às atividades conforme a orientação do cirurgião."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Mentoplastia."
+  },
+  {
+    "slug": "bichectomia",
+    "nome": "Bichectomia",
+    "grupo": "Face",
+    "cirurgico": true,
+    "resumo": "A bichectomia remove as bolsas de Bichat — compartimentos de gordura das bochechas — para afinar o terço inferior do rosto. É realizada por incisões internas, na mucosa da boca, sem cortes externos.",
+    "beneficios": [
+      "Afinar o contorno das bochechas",
+      "Realizar incisões internas, sem cicatrizes externas visíveis",
+      "Utilizar anestesia local, com ou sem sedação",
+      "Recuperação habitualmente rápida na maioria dos casos"
+    ],
+    "faq": [
+      {
+        "q": "A bichectomia é definitiva?",
+        "a": "Sim — a gordura removida não retorna. Por isso a indicação é avaliada com critério, considerando o rosto como um todo e as mudanças naturais que vêm com a idade."
+      },
+      {
+        "q": "Para quem é indicada?",
+        "a": "Para quem apresenta volume acentuado nas bochechas e deseja afinar o contorno do rosto. A avaliação individual confirma se há indicação no seu caso."
+      },
+      {
+        "q": "Como são a anestesia e os cortes?",
+        "a": "O procedimento é feito sob anestesia local, com ou sem sedação, por uma incisão interna próxima aos molares superiores — sem cortes externos."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "O inchaço costuma melhorar em cerca de uma semana. Nos primeiros dias, recomenda-se atenção especial à alimentação e à higiene oral, conforme orientação."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Bichectomia."
+  },
+  {
+    "slug": "cirurgia-intima",
+    "nome": "Cirurgia Íntima (Ninfoplastia)",
+    "grupo": "Íntima",
+    "cirurgico": true,
+    "resumo": "A ninfoplastia — ou cirurgia íntima — trata os pequenos lábios e estruturas vizinhas, por razões estéticas ou funcionais: assimetrias e volumes que causam desconforto ao vestir, praticar esportes ou na vida íntima. Todo o atendimento é conduzido com privacidade e acolhimento.",
+    "beneficios": [
+      "Reduzir os pequenos lábios quando causam desconforto físico",
+      "Tratar assimetrias da região íntima",
+      "Abordar incômodos ao vestir roupas justas, pedalar ou praticar esportes",
+      "Conduzir o atendimento com discrição e acolhimento em todas as etapas"
+    ],
+    "faq": [
+      {
+        "q": "A cirurgia íntima é apenas estética?",
+        "a": "Não. Muitas pacientes procuram o procedimento por desconforto físico em atividades cotidianas ou esportivas. A avaliação identifica a queixa principal e confirma a indicação."
+      },
+      {
+        "q": "Que anestesia é utilizada?",
+        "a": "A definição é individual, feita com o cirurgião e a equipe de anestesia, conforme o caso e a extensão do procedimento."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "Há um período de resguardo com cuidados de higiene orientados. Atividade física e vida íntima são retomadas de forma gradual, conforme a liberação médica."
+      },
+      {
+        "q": "As cicatrizes ficam visíveis?",
+        "a": "As incisões acompanham o contorno natural da região e tendem a ficar pouco perceptíveis após a cicatrização completa."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Cirurgia Íntima (Ninfoplastia)."
+  },
+  {
+    "slug": "transplante-capilar",
+    "nome": "Transplante Capilar (FUE)",
+    "grupo": "Capilar",
+    "cirurgico": true,
+    "resumo": "O transplante capilar restaura os fios em áreas de calvície ou rarefação, transferindo folículos de regiões doadoras mais densas para as áreas afetadas. Na técnica FUE, as unidades foliculares são extraídas individualmente, sem remoção de faixa de couro cabeludo. Indicado para homens e mulheres, após investigação da causa da queda.",
+    "beneficios": [
+      "Restaurar a densidade capilar em áreas de calvície ou rarefação",
+      "Extrair folículo a folículo, sem remoção de faixa de couro cabeludo (FUE)",
+      "Desenhar a linha capilar caso a caso",
+      "Atender homens e mulheres, após investigação da causa da queda"
+    ],
+    "faq": [
+      {
+        "q": "Quando o resultado começa a aparecer?",
+        "a": "Os fios transplantados caem nas primeiras semanas — o que é esperado — e voltam a crescer gradualmente. A evolução costuma ser percebida ao longo de vários meses, com acompanhamento médico."
+      },
+      {
+        "q": "Os fios transplantados podem cair de novo?",
+        "a": "Os folículos da área doadora tendem a ser mais resistentes à queda de padrão hormonal. Ainda assim, a evolução da calvície nas demais áreas deve ser acompanhada e, muitas vezes, tratada clinicamente."
+      },
+      {
+        "q": "O procedimento dói?",
+        "a": "É realizado com anestesia local. No pós-operatório, eventuais desconfortos costumam ser controlados com a medicação prescrita."
+      },
+      {
+        "q": "Qualquer pessoa pode fazer transplante capilar?",
+        "a": "Não. É preciso ter área doadora adequada e investigar a causa da queda — algumas causas exigem tratamento clínico antes do transplante, ou em vez dele."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Transplante Capilar (FUE)."
+  },
+  {
+    "slug": "botox",
+    "nome": "Botox",
+    "grupo": "Não cirúrgico",
+    "cirurgico": false,
+    "resumo": "O Botox — toxina botulínica — é um dos principais recursos para suavizar rugas dinâmicas e linhas de expressão, sobretudo na testa, entre as sobrancelhas e ao redor dos olhos. É um procedimento de uso exclusivamente médico, com doses e pontos definidos caso a caso.",
+    "beneficios": [
+      "Suavizar rugas dinâmicas na testa, na glabela e ao redor dos olhos",
+      "Realizar a aplicação em ambiente adequado, com indicação médica",
+      "Planejar doses e pontos para preservar a expressão natural",
+      "Contar com efeito temporário e reversível ao longo do tempo"
+    ],
+    "faq": [
+      {
+        "q": "Quanto tempo dura o efeito?",
+        "a": "O efeito é temporário — em geral, alguns meses. Novas aplicações podem ser feitas respeitando o intervalo orientado pelo médico."
+      },
+      {
+        "q": "Meu rosto pode ficar sem expressão?",
+        "a": "O planejamento busca suavizar as linhas preservando a expressão natural. Doses e pontos de aplicação são individualizados justamente para isso."
+      },
+      {
+        "q": "É um procedimento seguro?",
+        "a": "Em doses apropriadas e aplicado por profissional médico habilitado, é um procedimento consolidado. Possíveis reações são discutidas na consulta, antes da aplicação."
+      },
+      {
+        "q": "Existe idade certa para começar?",
+        "a": "A indicação depende da avaliação das linhas e da musculatura de cada pessoa — não de uma idade fixa."
+      },
+      {
+        "q": "Quando o efeito aparece?",
+        "a": "A ação começa nos primeiros dias e costuma se estabelecer em cerca de duas semanas, quando o resultado é reavaliado."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Botox."
+  },
+  {
+    "slug": "preenchimento-facial",
+    "nome": "Preenchimento Facial",
+    "grupo": "Não cirúrgico",
+    "cirurgico": false,
+    "resumo": "O preenchimento facial repõe volumes e trata sulcos por meio da injeção de substâncias biocompatíveis — como o ácido hialurônico, naturalmente presente na pele e que se torna escasso com o envelhecimento. Áreas, plano e quantidade são definidos em avaliação médica.",
+    "beneficios": [
+      "Tratar sulcos e áreas que perderam volume com o tempo",
+      "Utilizar substâncias biocompatíveis, como o ácido hialurônico",
+      "Planejar o tratamento por regiões, respeitando as proporções do rosto",
+      "Realizar o procedimento em ambiente médico, com avaliação prévia"
+    ],
+    "faq": [
+      {
+        "q": "Quais substâncias são utilizadas?",
+        "a": "Entre as opções estão o ácido hialurônico, a hidroxiapatita de cálcio e o ácido poliláctico — cada uma com indicações próprias, definidas pelo médico na avaliação."
+      },
+      {
+        "q": "Quanto tempo dura o preenchimento?",
+        "a": "Depende da substância, da área tratada e do metabolismo de cada pessoa. O médico informa a durabilidade esperada do material indicado para o seu caso."
+      },
+      {
+        "q": "O procedimento dói?",
+        "a": "O desconforto costuma ser leve: muitos produtos contêm anestésico na composição, e anestésicos tópicos podem ser utilizados. Inchaço leve nos primeiros dias é comum."
+      },
+      {
+        "q": "O preenchimento é reversível?",
+        "a": "Preenchimentos de ácido hialurônico podem ser dissolvidos com uma enzima específica, se necessário — um dos motivos da sua ampla utilização."
+      },
+      {
+        "q": "Posso voltar às atividades no mesmo dia?",
+        "a": "Em geral, sim — com orientações simples, como evitar calor intenso e exercícios vigorosos nas primeiras horas, conforme indicação médica."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Preenchimento Facial."
+  },
+  {
+    "slug": "harmonizacao-facial",
+    "nome": "Harmonização Facial",
+    "grupo": "Não cirúrgico",
+    "cirurgico": false,
+    "resumo": "A harmonização facial reúne técnicas não cirúrgicas — como toxina botulínica, preenchimentos e bioestimuladores — para equilibrar as proporções do rosto. Mais do que tratar um ponto isolado, o plano considera o rosto inteiro, com resultados que se definem gradualmente.",
+    "beneficios": [
+      "Avaliar o rosto como um todo, e não em pontos isolados",
+      "Combinar técnicas não cirúrgicas conforme a necessidade de cada região",
+      "Trabalhar equilíbrio e proporção respeitando os traços de cada pessoa",
+      "Planejar por etapas, com reavaliações ao longo do processo"
+    ],
+    "faq": [
+      {
+        "q": "Quais procedimentos entram na harmonização?",
+        "a": "Depende do caso: podem entrar toxina botulínica, preenchimentos, bioestimuladores e fios, entre outros recursos. O plano é individual, definido em avaliação médica."
+      },
+      {
+        "q": "Quando vejo o resultado?",
+        "a": "Parte do efeito é perceptível de imediato; a acomodação costuma se completar em torno de 30 dias, quando o resultado se torna mais aparente."
+      },
+      {
+        "q": "Quanto tempo dura?",
+        "a": "Em média, de um a dois anos — variando conforme as substâncias utilizadas e o metabolismo de cada pessoa."
+      },
+      {
+        "q": "É definitivo?",
+        "a": "Não. Os materiais utilizados são absorvíveis, e manutenções periódicas fazem parte do planejamento do tratamento."
+      },
+      {
+        "q": "Vou ficar com o rosto muito diferente?",
+        "a": "O objetivo é equilibrar proporções preservando a identidade do rosto. As decisões são tomadas em conjunto com o médico, etapa por etapa."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Harmonização Facial."
+  },
+  {
+    "slug": "fios-de-sustentacao",
+    "nome": "Fios de Sustentação",
+    "grupo": "Não cirúrgico",
+    "cirurgico": false,
+    "resumo": "Os fios de sustentação tratam a flacidez leve a moderada: inseridos sob a pele com agulha ou cânula, reposicionam tecidos e estimulam a produção de colágeno na região. São uma opção não cirúrgica para casos selecionados.",
+    "beneficios": [
+      "Tratar a flacidez leve a moderada sem cirurgia",
+      "Estimular a produção natural de colágeno na área tratada",
+      "Realizar procedimento minimamente invasivo, com agulha ou cânula",
+      "Retornar rapidamente às atividades, na maioria dos casos"
+    ],
+    "faq": [
+      {
+        "q": "Os fios substituem o lifting facial?",
+        "a": "Não. Os fios tratam graus leves a moderados de flacidez; quadros mais avançados costumam ter melhor indicação cirúrgica. A avaliação define o caminho adequado."
+      },
+      {
+        "q": "Quanto tempo dura o efeito?",
+        "a": "Os fios são absorvíveis e o efeito é temporário, variando conforme o material utilizado e a resposta de cada organismo. O médico orienta a durabilidade esperada."
+      },
+      {
+        "q": "O procedimento dói?",
+        "a": "É utilizado anestésico local. Desconforto leve, sensibilidade e pequenos hematomas podem ocorrer nos primeiros dias."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "Costuma ser rápida, com orientações simples — como evitar pressão sobre a região e movimentos exagerados nos primeiros dias."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Fios de Sustentação."
+  },
+  {
+    "slug": "bioestimulador-de-colageno",
+    "nome": "Bioestimulador de Colágeno",
+    "grupo": "Não cirúrgico",
+    "cirurgico": false,
+    "resumo": "Bioestimuladores são substâncias injetáveis que estimulam a própria pele a produzir colágeno — proteína que diminui naturalmente com o envelhecimento, levando a flacidez e perda de firmeza. O tratamento age de forma gradual, em sessões planejadas.",
+    "beneficios": [
+      "Estimular a produção natural de colágeno da pele",
+      "Tratar a flacidez e a perda de firmeza de forma gradual",
+      "Construir o efeito progressivamente, ao longo das semanas",
+      "Aplicar no rosto e em regiões do corpo, conforme avaliação"
+    ],
+    "faq": [
+      {
+        "q": "Quando os efeitos aparecem?",
+        "a": "Como o mecanismo depende da produção de colágeno pelo próprio organismo, a resposta é gradual — costuma ser percebida ao longo de semanas a meses, variando entre as pessoas."
+      },
+      {
+        "q": "Quantas sessões são necessárias?",
+        "a": "Depende do grau de flacidez e da substância utilizada. O protocolo é definido na avaliação médica e reavaliado ao longo do tratamento."
+      },
+      {
+        "q": "É o mesmo que preenchimento?",
+        "a": "Não. O preenchimento repõe volume de forma imediata; o bioestimulador induz a pele a produzir colágeno ao longo do tempo. Em alguns planos, os dois recursos se complementam."
+      },
+      {
+        "q": "Onde pode ser aplicado?",
+        "a": "No rosto, pescoço, colo e em áreas do corpo com flacidez, sempre conforme a indicação médica."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Bioestimulador de Colágeno."
+  },
+  {
+    "slug": "pdrn",
+    "nome": "PDRN",
+    "grupo": "Não cirúrgico",
+    "cirurgico": false,
+    "resumo": "O PDRN — polidesoxirribonucleotídeo — é um composto derivado do DNA do salmão utilizado em tratamentos de regeneração e qualidade da pele. É utilizado com o objetivo de estimular processos de reparo celular, hidratação e produção de colágeno e elastina, conforme avaliação médica.",
+    "beneficios": [
+      "Estimular a regeneração celular da pele",
+      "Favorecer a hidratação e a qualidade global da pele",
+      "Apoiar a produção de colágeno e elastina",
+      "Contribuir no tratamento de cicatrizes, conforme indicação"
+    ],
+    "faq": [
+      {
+        "q": "O que é o PDRN, exatamente?",
+        "a": "Um polinucleotídeo derivado do DNA do salmão, purificado para uso em tratamentos regenerativos da pele, com aplicação injetável em ambiente médico."
+      },
+      {
+        "q": "Para quem é indicado?",
+        "a": "Para quem busca melhorar a qualidade, a hidratação e o viço da pele, ou como coadjuvante em protocolos de regeneração — sempre após avaliação médica."
+      },
+      {
+        "q": "Quantas sessões são necessárias?",
+        "a": "Os protocolos costumam envolver mais de uma sessão, com intervalos definidos pelo médico conforme a resposta da pele."
+      },
+      {
+        "q": "Pode ser combinado com outros tratamentos?",
+        "a": "Sim — com frequência integra planos que incluem bioestimuladores, lasers e outros recursos, conforme o objetivo definido na avaliação."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre PDRN."
+  },
+  {
+    "slug": "terapia-com-celulas-tronco",
+    "nome": "Terapia com Células-Tronco",
+    "grupo": "Não cirúrgico",
+    "cirurgico": false,
+    "resumo": "A terapia com células-tronco utiliza células com capacidade de diferenciação para apoiar a regeneração de tecidos. É um campo da medicina regenerativa em evolução, cujas indicações são avaliadas caso a caso, com critério e transparência.",
+    "beneficios": [
+      "Apoiar processos de regeneração de tecidos",
+      "Avaliar cada indicação com critério, caso a caso",
+      "Esclarecer possibilidades e limites com transparência na consulta",
+      "Acompanhar clinicamente todo o protocolo"
+    ],
+    "faq": [
+      {
+        "q": "O que são células-tronco?",
+        "a": "Células com capacidade de se diferenciar em vários tipos celulares — propriedade que fundamenta seu estudo em processos de reparo e regeneração de tecidos."
+      },
+      {
+        "q": "Para que casos a terapia é indicada?",
+        "a": "As indicações são específicas e avaliadas individualmente. Na consulta, o médico esclarece o que se aplica — e o que não se aplica — ao seu caso."
+      },
+      {
+        "q": "É um tratamento consolidado?",
+        "a": "É um campo em evolução dentro da medicina regenerativa. As possibilidades e os limites do tratamento são discutidos com transparência na avaliação."
+      },
+      {
+        "q": "Como funciona o protocolo?",
+        "a": "As etapas, as fontes celulares e os cuidados envolvidos são explicados em detalhe na consulta, conforme o tratamento considerado e as normas vigentes."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Terapia com Células-Tronco."
+  },
+  {
+    "slug": "dermoabrasao",
+    "nome": "Dermoabrasão",
+    "grupo": "Não cirúrgico",
+    "cirurgico": false,
+    "resumo": "A dermoabrasão — também chamada de peeling mecânico — esfolia de forma controlada a camada superficial da pele para renovar sua aparência. Pode ser feita em pequenas áreas ou em toda a face, sob anestesia adequada a cada caso.",
+    "beneficios": [
+      "Renovar a camada superficial da pele de forma controlada",
+      "Tratar irregularidades de textura e cicatrizes superficiais",
+      "Aplicar em áreas localizadas ou em toda a face",
+      "Ajustar a anestesia à extensão do procedimento"
+    ],
+    "faq": [
+      {
+        "q": "Como funciona a dermoabrasão?",
+        "a": "Um instrumento rotativo — ou a técnica manual — remove de modo controlado a camada mais superficial da pele, estimulando a renovação celular."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "A pele passa por fases de vermelhidão e reepitelização, com prazos que variam conforme a profundidade do tratamento. Proteção solar rigorosa é indispensável no período."
+      },
+      {
+        "q": "Qual a diferença para o peeling químico?",
+        "a": "O princípio é o mesmo — renovar camadas da pele —, mas a dermoabrasão é mecânica, enquanto o peeling químico utiliza substâncias. A escolha depende da indicação de cada caso."
+      },
+      {
+        "q": "Qualquer pele pode fazer?",
+        "a": "A avaliação do fototipo e da condição da pele define a indicação e os parâmetros seguros para cada pessoa."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Dermoabrasão."
+  },
+  {
+    "slug": "peeling",
+    "nome": "Peeling",
+    "grupo": "Não cirúrgico",
+    "cirurgico": false,
+    "resumo": "O peeling remove camadas superficiais da pele para estimular a renovação celular e a produção de colágeno e elastina. Pode ser químico, físico ou a laser — e superficial, médio ou profundo, conforme o objetivo e a avaliação médica.",
+    "beneficios": [
+      "Estimular a renovação celular e a produção de colágeno",
+      "Tratar textura, manchas e sinais de fotoenvelhecimento",
+      "Escolher entre diferentes profundidades — superficial, médio ou profundo",
+      "Definir o protocolo conforme o tipo de pele e o objetivo"
+    ],
+    "faq": [
+      {
+        "q": "Qual peeling é o certo para mim?",
+        "a": "Depende do objetivo e da sua pele: peelings superficiais pedem menos tempo de recuperação; médios e profundos tratam quadros mais marcados. A avaliação médica define."
+      },
+      {
+        "q": "A pele descasca muito?",
+        "a": "Depende da profundidade: do leve ressecamento à descamação evidente. O médico descreve o que esperar do protocolo indicado para o seu caso."
+      },
+      {
+        "q": "Posso tomar sol durante o tratamento?",
+        "a": "A exposição solar deve ser evitada e a proteção reforçada durante todo o tratamento — é uma condição para a segurança do procedimento."
+      },
+      {
+        "q": "Quantas sessões são necessárias?",
+        "a": "Peelings superficiais costumam ser feitos em série; os mais profundos, em sessão única ou em poucas sessões. O plano é individual."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Peeling."
+  },
+  {
+    "slug": "bodytite",
+    "nome": "BodyTite",
+    "grupo": "Tecnologia",
+    "cirurgico": false,
+    "resumo": "O BodyTite utiliza radiofrequência bipolar para tratar gordura localizada e flacidez de pele em um mesmo procedimento minimamente invasivo. Pode ser aplicado em regiões como abdome, braços, coxas e papada — isolado ou associado à lipoaspiração.",
+    "beneficios": [
+      "Tratar gordura localizada e flacidez em um mesmo procedimento",
+      "Utilizar tecnologia de radiofrequência minimamente invasiva",
+      "Aplicar em abdome, braços, coxas e papada, conforme indicação",
+      "Associar à lipoaspiração, quando indicado"
+    ],
+    "faq": [
+      {
+        "q": "Como o BodyTite funciona?",
+        "a": "A radiofrequência bipolar aquece os tecidos de forma controlada, por dentro e por fora, atuando sobre a gordura e estimulando a retração da pele."
+      },
+      {
+        "q": "É uma cirurgia?",
+        "a": "É um procedimento minimamente invasivo, que pode ser realizado em ambiente adequado de consultório ou em centro cirúrgico, conforme a extensão e o caso."
+      },
+      {
+        "q": "Quem pode realizar o procedimento?",
+        "a": "É um procedimento médico, conduzido por cirurgião plástico ou dermatologista treinado na tecnologia."
+      },
+      {
+        "q": "Substitui a abdominoplastia?",
+        "a": "Não necessariamente. Flacidez acentuada com sobra de pele costuma ter indicação cirúrgica; a radiofrequência atende graus mais leves. A avaliação define o caminho adequado."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre BodyTite."
+  },
+  {
+    "slug": "morpheus-8",
+    "nome": "Morpheus 8",
+    "grupo": "Tecnologia",
+    "cirurgico": false,
+    "resumo": "O Morpheus 8 combina microagulhamento e radiofrequência: microagulhas levam energia às camadas mais profundas da pele, provocando microlesões controladas que estimulam a produção de colágeno e elastina. Trata regiões do rosto e do corpo.",
+    "beneficios": [
+      "Estimular colágeno e elastina em camadas profundas da pele",
+      "Tratar textura, firmeza e cicatrizes, conforme indicação",
+      "Aplicar a tecnologia na face e no corpo",
+      "Ajustar o protocolo em sessões, conforme a resposta da pele"
+    ],
+    "faq": [
+      {
+        "q": "O procedimento dói?",
+        "a": "Utiliza-se anestésico tópico e os parâmetros são ajustados ao conforto de cada pessoa. Vermelhidão e sensação de calor são esperadas nas primeiras horas."
+      },
+      {
+        "q": "Quantas sessões são necessárias?",
+        "a": "Os protocolos variam conforme a região e o objetivo — em geral, mais de uma sessão, com intervalos definidos pelo médico."
+      },
+      {
+        "q": "Qual o tempo de recuperação?",
+        "a": "Costuma ser curto: vermelhidão e leve inchaço por poucos dias, com proteção solar rigorosa durante o período orientado."
+      },
+      {
+        "q": "Para que casos é indicado?",
+        "a": "Flacidez leve, textura irregular, poros dilatados e cicatrizes estão entre as indicações possíveis. A indicação precisa é definida em avaliação médica."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Morpheus 8."
+  },
+  {
+    "slug": "laser-de-co2",
+    "nome": "Laser de CO2",
+    "grupo": "Tecnologia",
+    "cirurgico": false,
+    "resumo": "O laser de CO2 utiliza feixes de luz concentrada para renovar a pele: estimula o colágeno e a renovação celular, tratando textura, rugas finas, manchas e cicatrizes — em áreas como face, pescoço, colo e mãos. Exige planejamento cuidadoso quanto à exposição solar.",
+    "beneficios": [
+      "Estimular o colágeno e a renovação celular da pele",
+      "Tratar textura, rugas finas, manchas e cicatrizes de acne",
+      "Aplicar na face, pescoço, colo e mãos, conforme indicação",
+      "Ajustar os parâmetros à necessidade de cada pele"
+    ],
+    "faq": [
+      {
+        "q": "Qual a melhor época para fazer?",
+        "a": "Preferencialmente em períodos de menor exposição ao sol e com a pele não bronzeada. A proteção solar rigorosa faz parte do protocolo, antes e depois."
+      },
+      {
+        "q": "Como é a recuperação?",
+        "a": "Há vermelhidão e descamação por alguns dias, variando com a profundidade do tratamento. O médico orienta os cuidados de cada fase."
+      },
+      {
+        "q": "Serve para qualquer tipo de pele?",
+        "a": "A indicação e os parâmetros dependem do fototipo e da condição da pele — por isso a avaliação prévia é indispensável."
+      },
+      {
+        "q": "Quantas sessões são necessárias?",
+        "a": "Depende da profundidade e do objetivo: tratamentos mais superficiais podem pedir mais sessões; os mais profundos, menos. O plano é definido na avaliação."
+      }
+    ],
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Laser de CO2."
+  }
+]

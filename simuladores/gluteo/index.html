@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador de Glúteo — Hospital Espaço da Plástica</title>
+<link rel="icon" type="image/svg+xml" href="../../img/favicon.svg">
+<link rel="canonical" href="https://espacodaplastica.com.br/simuladores/gluteo/">
+<meta property="og:title" content="Simulador de Glúteo — Hospital Espaço da Plástica">
+<meta property="og:description" content="Simulador educativo: compare projeções de glúteo numa modelo virtual e leve sua simulação para a avaliação. Hospital Espaço da Plástica, Campo Grande-MS.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="description" content="Simulador educativo: compare projeções de glúteo numa modelo virtual e leve sua simulação para a avaliação. Hospital Espaço da Plástica, Campo Grande-MS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/design-system.css">
+<link rel="stylesheet" href="../../css/pages.css">
+<style>
+  .sim-stage{ display:grid; gap:var(--sp-4); align-items:start }
+  @media (min-width:1000px){ .sim-stage{ grid-template-columns:6fr 6fr } }
+
+  .stage{ position:relative; overflow:hidden; border:1px solid color-mix(in srgb, var(--champagne-2) 30%, transparent);
+    box-shadow:var(--shadow-photo); max-width:560px }
+  .stage img{ width:100%; display:block }
+  .stage img.ov{ position:absolute; inset:0; opacity:0; transition:opacity .9s var(--ease-lux) }
+  .stage img.ov.on{ opacity:1 }
+  .stage .selo{ position:absolute; left:0; bottom:0; z-index:7; padding:.5rem 1rem;
+    font-size:.62rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--porcelain); background:color-mix(in srgb, var(--graphite) 74%, transparent);
+    backdrop-filter:blur(6px); pointer-events:none }
+
+  .cmp{ margin-top:1rem; display:inline-flex; align-items:center; gap:.7rem;
+    font-size:.78rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
+    color:color-mix(in srgb, var(--porcelain) 70%, transparent); cursor:pointer;
+    border:1px solid color-mix(in srgb, var(--champagne-2) 30%, transparent); padding:.7rem 1.2rem }
+  .cmp:active{ border-color:var(--champagne-2); color:var(--champagne-2) }
+
+  .steps{ display:grid; gap:.8rem }
+  .step{ display:flex; align-items:center; gap:.9rem; padding:1.05rem 1.2rem; text-align:left;
+    border:1px solid color-mix(in srgb, var(--champagne-2) 22%, transparent);
+    color:inherit; transition:all .45s var(--ease-lux); cursor:pointer; font:inherit }
+  .step .n{ font-family:var(--serif); font-style:italic; color:var(--champagne-2) }
+  .step .ck{ margin-left:auto; width:20px; height:20px; border-radius:50%; flex:none;
+    border:1px solid color-mix(in srgb, var(--champagne-2) 45%, transparent);
+    display:grid; place-items:center; font-size:.65rem; color:transparent; transition:all .45s }
+  .step:hover{ border-color:color-mix(in srgb, var(--champagne-2) 55%, transparent) }
+  .step.on{ background:color-mix(in srgb, var(--champagne) 10%, transparent); border-color:var(--champagne) }
+  .step.on .ck{ background:var(--champagne); border-color:var(--champagne); color:var(--graphite) }
+
+  .result{ margin-top:var(--sp-3); padding:2rem;
+    border:1px solid var(--champagne); background:color-mix(in srgb, var(--champagne) 8%, transparent);
+    opacity:0; transform:translateY(18px); visibility:hidden; transition:all .8s var(--ease-lux) }
+  .result.show{ opacity:1; transform:none; visibility:visible }
+  .result h3{ font-size:1.5rem }
+  .pick strong{ color:var(--champagne-2) }
+</style>
+</head>
+<body class="dark" style="background:var(--forest-deep)">
+
+<header class="nav scrolled">
+  <a class="nav-logo" href="../../index.html"><img class="lg-sym" src="../../img/logo-simbolo.svg" alt="Espaço da Plástica"><span class="lg-tx"><span class="lg-top">Espaço da</span><span class="lg-main">Plástica</span><small>Hospital · Campo Grande</small></span></a>
+  <nav class="nav-links">
+    <a href="../../medicos/">Corpo Clínico</a>
+    <a href="../../especialidades/">Especialidades</a>
+    <a href="../../estrutura/">O Hospital</a>
+    <a href="../../seguranca/">Segurança</a>
+    <a href="../../hotelaria/">Hotelaria</a>
+    <a href="../../simuladores/">Simuladores</a>
+  </nav>
+  <div style="display:flex; align-items:center; gap:1rem">
+    <a class="btn btn-gold nav-cta" href="#" data-wa="Olá! Usei o simulador de glúteo no site e gostaria de agendar uma avaliação.">Agendar avaliação</a>
+    <button class="burger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="menu">
+  <a href="../../index.html">Início</a>
+  <a href="../../medicos/">Corpo Clínico</a>
+  <a href="../../especialidades/">Especialidades</a>
+  <a href="../../estrutura/">O Hospital</a>
+  <a href="../../seguranca/">Segurança</a>
+  <a href="../../hotelaria/">Hotelaria</a>
+  <a href="../../simuladores/">Simuladores</a>
+  <a href="../../blog/">Blog</a>
+  <a href="../../contato/">Contato</a>
+</nav>
+
+<section class="page-head" style="padding-bottom:var(--sp-3)">
+  <div class="wrap">
+    <p class="overline" style="color:var(--champagne-2)">Simulador educativo</p>
+    <h1>Compare projeções. Converse com <em>clareza</em>.</h1>
+    <p class="lead">Selecione uma projeção e veja o perfil da modelo virtual mudar —
+      uma referência visual para a conversa com o cirurgião.</p>
+    <p class="disclaimer mt-3" style="max-width:64ch"><strong>Este é um simulador ilustrativo sobre uma modelo
+      virtual criada por inteligência artificial.</strong> A projeção adequada é definida em avaliação médica
+      individual, com exame físico — esta simulação não representa nem promete resultado.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:var(--sp-3)">
+  <div class="wrap sim-stage">
+
+    <!-- Palco fotográfico -->
+    <div>
+      <div class="stage" aria-label="Fotografia ilustrativa de uma modelo virtual de perfil para simulação de projeção de glúteo">
+        <img src="../../img/sim/gluteo-base.jpg" alt="Modelo virtual — perfil de referência" id="base">
+        <img class="ov" src="../../img/sim/gluteo-base.jpg" alt="" id="ov" aria-hidden="true">
+        <span class="selo">Modelo virtual · imagem gerada por IA</span>
+      </div>
+      <button class="cmp" id="cmp" type="button">Segure para comparar com o antes</button>
+    </div>
+
+    <!-- Painel -->
+    <div>
+      <p class="overline" style="color:var(--champagne-2)">Projeção <span style="letter-spacing:0; text-transform:none">(ilustrativa)</span></p>
+      <div class="steps mt-2" id="projs" role="group" aria-label="Escolha ilustrativa de projeção">
+        <button type="button" class="step" data-p="1"><span class="n">01</span> Natural <span class="ck">✓</span></button>
+        <button type="button" class="step" data-p="2"><span class="n">02</span> Moderada <span class="ck">✓</span></button>
+        <button type="button" class="step" data-p="3"><span class="n">03</span> Acentuada <span class="ck">✓</span></button>
+      </div>
+
+      <div class="result" id="result" aria-live="polite">
+        <p class="overline" style="color:var(--champagne-2)">Sua simulação</p>
+        <h3 class="mt-2">Gostou da referência? <em>Leve-a para a avaliação.</em></h3>
+        <p class="pick mt-2">Simulação escolhida: <strong id="pick">—</strong></p>
+        <form class="lead-form mt-3" data-lead="projeção de glúteo" id="leadform">
+          <div class="field"><label for="g-nome">Seu nome</label><input id="g-nome" name="nome" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="g-msg">Mensagem <span style="text-transform:none;letter-spacing:0">(opcional)</span></label><input id="g-msg" name="mensagem" type="text"></div>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap">
+            <button class="btn btn-gold" type="submit">Continuar no WhatsApp <span class="arr">→</span></button>
+            <button class="btn btn-ghost" type="button" id="reset">Refazer</button>
+          </div>
+          <p class="form-ok small" hidden>Abrimos seu WhatsApp com a mensagem pronta — é só enviar. 💬</p>
+          <p class="disclaimer">Seus dados são usados apenas para este contato, conforme a LGPD.</p>
+        </form>
+      </div>
+
+      <p class="disclaimer mt-3">Simulação ilustrativa com fins exclusivamente educativos, sobre imagem de
+        modelo virtual gerada por IA. Todo procedimento cirúrgico envolve riscos; a avaliação individual
+        com um cirurgião plástico é indispensável.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="legal">
+      <span>© <span data-year>2026</span> Hospital Espaço da Plástica S/S · CNPJ 14.257.355/0001-75 · CRM/MS 1067</span>
+      <span>Resp. Técnico: Dr. Rodrigo Anache Anbar · CRM/MS 4999 · RQE 3691</span>
+      <span>Resp. Clínico: Dr. Rafael Anache Anbar · CRM/MS 5000 · RQE 3692</span>
+      <span>Este site tem caráter informativo e não substitui a consulta médica.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" data-wa="Olá! Usei o simulador de glúteo no site e gostaria de agendar uma avaliação." aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.2-3.4-.7-2.8-1.2-4.7-4-4.8-4.2-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.4Z"/></svg>
+  <span class="lbl">Agendar avaliação</span>
+</a>
+
+<script src="../../js/main.js"></script>
+<script>
+(() => {
+  'use strict';
+  const ov = document.getElementById('ov');
+  const result = document.getElementById('result');
+  const pick = document.getElementById('pick');
+  const form = document.getElementById('leadform');
+  const NOME = { 1: 'natural', 2: 'moderada', 3: 'acentuada' };
+
+  for (const p of ['1','2','3']) { const i = new Image(); i.src = `../../img/sim/gluteo-${p}.jpg`; }
+
+  document.querySelectorAll('#projs .step').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('#projs .step').forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    const p = b.dataset.p;
+    ov.src = `../../img/sim/gluteo-${p}.jpg`;
+    ov.classList.add('on');
+    pick.textContent = `projeção ${NOME[p]}`;
+    form.dataset.lead = `projeção de glúteo (simulação: ${NOME[p]})`;
+    result.classList.add('show');
+  }));
+
+  /* comparar (segurar) */
+  const cmp = document.getElementById('cmp');
+  const hold = (on) => { ov.style.transition = 'opacity .25s'; ov.style.opacity = on ? 0 : ''; if (!on) setTimeout(() => ov.style.transition = '', 260); };
+  cmp.addEventListener('pointerdown', () => hold(true));
+  ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => cmp.addEventListener(ev, () => hold(false)));
+
+  document.getElementById('reset').addEventListener('click', () => {
+    document.querySelectorAll('.step').forEach(x => x.classList.remove('on'));
+    ov.classList.remove('on');
+    result.classList.remove('show');
+    form.reset(); form.dataset.lead = 'projeção de glúteo';
+    const ok = form.querySelector('.form-ok'); if (ok) ok.hidden = true;
+  });
+})();
+</script>
+</body>
+</html>
