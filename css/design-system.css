@@ -544,3 +544,7 @@ h1 em, h2 em, h3 em{ color:var(--champagne); font-weight:340 }
   .nav .nav-logo .lg-sym{ height:2.15rem }
   .nav .nav-logo .lg-main{ font-size:.98rem }
 }
+
+/* ===================== ILUSTRAÇÕES DE PROCEDIMENTO (contorno champanhe) ===================== */
+.ph-ilus{ aspect-ratio:4/3; background:#F5F0E8 }
+.ph-ilus img{ width:100%; height:100%; object-fit:cover; display:block }

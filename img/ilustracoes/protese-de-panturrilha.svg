@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675">
+<rect width="900" height="675" fill="#F5F0E8"/>
+<rect x="26" y="26" width="848" height="623" fill="none" stroke="#C2A15F" stroke-opacity=".32" stroke-width="1"/>
+<g transform="translate(-46.0 -36.6) scale(1.10)"><g fill="none" stroke="#22261F" stroke-width="3.4" stroke-opacity="1" stroke-linecap="round" stroke-linejoin="round"><path d="M 472 128 C 464 188, 460 238, 466 286 C 498 318, 510 372, 498 424 C 490 458, 474 486, 466 522 C 461 548, 460 574, 462 604" stroke-width="3.4"/>
+       <path d="M 424 128 C 426 250, 426 420, 430 604" stroke-width="2" stroke-opacity=".5"/></g><g fill="none" stroke="#C2A15F" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 9"><path d="M 477 324 C 466 352, 466 392, 478 420 C 489 394, 489 350, 477 324 Z"/></g><path d="M 380 370 L 418 370" stroke="#C2A15F" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M 409.9 373.9 L 418 370 L 409.9 366.1" stroke="#C2A15F" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M 556 217.85 q 3.24 10.35 12.15 12.15 q -8.91 1.8 -12.15 12.15 q -3.24 -10.35 -12.15 -12.15 q 8.91 -1.8 12.15 -12.15 Z" fill="#C2A15F"/></g>
+</svg>
