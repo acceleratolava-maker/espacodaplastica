@@ -184,6 +184,19 @@ h1 em, h2 em, h3 em{ color:var(--champagne); font-weight:340 }
 @media (min-width:1100px){ .nav-links{ display:flex } }
 .nav-cta{ display:none }
 @media (min-width:700px){ .nav-cta{ display:inline-flex; padding:.75rem 1.5rem; font-size:.78rem } }
+/* Seletor de idioma (bandeiras) */
+.lang-switch{ display:flex; align-items:center; gap:.42rem }
+.lang-switch .lang{ display:inline-flex; width:25px; height:17px; border-radius:3px; overflow:hidden;
+  box-shadow:0 0 0 1px color-mix(in srgb, var(--porcelain) 24%, transparent); opacity:.5;
+  transition:opacity .3s ease, box-shadow .3s ease, transform .3s ease }
+.lang-switch .lang img{ width:100%; height:100%; object-fit:cover; display:block }
+.lang-switch .lang:hover{ opacity:1; transform:translateY(-1px) }
+.lang-switch .lang.is-active{ opacity:1; box-shadow:0 0 0 1.5px var(--champagne-2) }
+@media (max-width:479px){ .lang-switch{ gap:.35rem } .lang-switch .lang{ width:22px; height:15px } }
+/* variante dentro do menu mobile */
+.menu .lang-switch{ margin-top:2rem; gap:.7rem }
+.menu .lang-switch .lang{ width:40px; height:27px; opacity:.7 }
+.menu .lang-switch .lang.is-active{ opacity:1 }
 
 /* Hambúrguer + menu overlay */
 .burger{ width:44px; height:44px; display:grid; place-items:center; gap:0 }
@@ -427,12 +440,13 @@ h1 em, h2 em, h3 em{ color:var(--champagne); font-weight:340 }
   border-top:1px solid color-mix(in srgb, var(--porcelain) 12%, transparent);
   font-size:.78rem; color:color-mix(in srgb, var(--porcelain) 45%, transparent);
   display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between }
-.footer .legal .credit{ flex-basis:100%; text-align:center; margin-top:.7rem;
-  font-size:.72rem; letter-spacing:.12em; color:color-mix(in srgb, var(--porcelain) 30%, transparent) }
-.footer .legal .credit a{ color:inherit; text-decoration:none; transition:color .25s ease }
-.footer .legal .credit b{ font-weight:600; letter-spacing:.2em;
-  color:color-mix(in srgb, var(--champagne-2) 80%, transparent) }
-.footer .legal .credit a:hover b{ color:var(--champagne-2) }
+.footer .legal .credit{ flex-basis:100%; margin-top:.85rem;
+  display:flex; align-items:center; justify-content:center; gap:.6rem;
+  font-size:.62rem; font-weight:600; letter-spacing:.28em; text-transform:uppercase;
+  color:color-mix(in srgb, var(--porcelain) 34%, transparent) }
+.footer .legal .credit img{ height:15px; width:auto; display:block; opacity:.9;
+  transition:opacity .3s ease, transform .3s ease }
+.footer .legal .credit:hover img{ opacity:1; transform:translateY(-1px) }
 
 /* ---------- REVEALS (JS adiciona .in) ---------- */
 .rv{ opacity:0; transform:translateY(34px); transition:opacity var(--dur) var(--ease-lux), transform var(--dur) var(--ease-lux) }
