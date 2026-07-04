@@ -2,6 +2,9 @@
 (() => {
   'use strict';
 
+  // Camada de dados p/ GA4/GTM (eventos de conversao)
+  window.dataLayer = window.dataLayer || [];
+
   /* ---------- Nav: fundo ao rolar ---------- */
   const nav = document.querySelector('.nav');
   const onScroll = () => nav && nav.classList.toggle('scrolled', window.scrollY > 40);
@@ -54,6 +57,7 @@
     el.addEventListener('click', (ev) => {
       ev.preventDefault();
       const msg = el.dataset.wa || 'Hello! I found you through the website and would like to schedule a consultation.';
+      window.dataLayer.push({ event: 'whatsapp_click', wa_context: (msg||'').slice(0,80) });
       window.open(`https://api.whatsapp.com/send?phone=${WA_PHONE}&text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
   });
@@ -67,6 +71,7 @@
       const nome = (d.get('nome') || '').toString().trim();
       const interesse = (d.get('interesse') || form.dataset.lead || '').toString().trim();
       const obs = (d.get('mensagem') || '').toString().trim();
+      window.dataLayer.push({ event: 'lead_submit', lead_interest: interesse || form.dataset.lead || '' });
       let msg;
       if (form.dataset.leadMode === 'b2b') {
         // Lead profissional (ex.: médico interessado em operar no hospital)
