@@ -136,6 +136,12 @@ h1 em, h2 em, h3 em{ color:var(--champagne); font-weight:340 }
   .grid-asym{ grid-template-columns:5fr 7fr }       /* assimetria editorial */
   .grid-asym-r{ grid-template-columns:7fr 5fr }
 }
+/* Mobile: impede que itens de grid (fotos com aspect-ratio) estourem a coluna
+   e provoquem scroll horizontal / corte de conteúdo no celular */
+@media (max-width:899px){
+  .grid > *{ min-width:0 }
+  .ph{ width:100%; max-width:100%; min-width:0 }
+}
 .hairline-top{ border-top:var(--hairline); padding-top:var(--sp-4) }
 .dark .hairline-top{ border-top:var(--hairline-dark) }
 
