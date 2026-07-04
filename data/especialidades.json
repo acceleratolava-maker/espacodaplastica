@@ -988,10 +988,10 @@
   },
   {
     "slug": "morpheus-8",
-    "nome": "Morpheus 8",
+    "nome": "Morpheus8",
     "grupo": "Tecnologia",
     "cirurgico": false,
-    "resumo": "O Morpheus 8 combina microagulhamento e radiofrequência: microagulhas levam energia às camadas mais profundas da pele, provocando microlesões controladas que estimulam a produção de colágeno e elastina. Trata regiões do rosto e do corpo.",
+    "resumo": "O Morpheus8 combina microagulhamento e radiofrequência: microagulhas levam energia às camadas mais profundas da pele, provocando microlesões controladas que estimulam a produção de colágeno e elastina. Trata regiões do rosto e do corpo.",
     "beneficios": [
       "Estimular colágeno e elastina em camadas profundas da pele",
       "Tratar textura, firmeza e cicatrizes, conforme indicação",
@@ -1016,7 +1016,7 @@
         "a": "Flacidez leve, textura irregular, poros dilatados e cicatrizes estão entre as indicações possíveis. A indicação precisa é definida em avaliação médica."
       }
     ],
-    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Morpheus 8."
+    "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Morpheus8."
   },
   {
     "slug": "laser-de-co2",
