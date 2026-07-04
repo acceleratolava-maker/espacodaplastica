@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador de Botox — Hospital Espaço da Plástica</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="canonical" href="https://espacodaplastica.com.br/es/simuladores/botox/">
+<meta property="og:title" content="Simulador de Botox — Hospital Espaço da Plástica">
+<meta property="og:description" content="Simulador educativo: toque las líneas de expresión de una modelo virtual y vea cómo cada región se suaviza. Hospital Espaço da Plástica, Campo Grande-MS.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta name="description" content="Simulador educativo: toque las líneas de expresión de una modelo virtual y vea cómo cada región se suaviza. Hospital Espaço da Plástica, Campo Grande-MS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/design-system.css">
+<link rel="stylesheet" href="/css/pages.css">
+<style>
+  .sim-stage{ display:grid; gap:var(--sp-4); align-items:start }
+  @media (min-width:1000px){ .sim-stage{ grid-template-columns:7fr 5fr } }
+
+  /* Palco fotográfico */
+  .stage{ position:relative; overflow:hidden; border:1px solid color-mix(in srgb, var(--champagne-2) 30%, transparent);
+    cursor:none; box-shadow:var(--shadow-photo) }
+  .stage img.base{ width:100%; display:block }
+  .stage .ov{
+    position:absolute; inset:0; background-image:url('../../img/sim/botox-suave.jpg');
+    background-size:100% 100%; opacity:0; transition:opacity 1.6s var(--ease-lux);
+    pointer-events:none;
+  }
+  .stage .ov.on{ opacity:1 }
+  /* máscaras elípticas por zona (com pluma) */
+  /* elipses ESPELHADAS do processamento (gerar-sim-variantes.py) */
+  .ov-testa{ -webkit-mask-image:radial-gradient(ellipse 23% 6.5% at 50% 29%, #000 60%, transparent 100%);
+             mask-image:radial-gradient(ellipse 23% 6.5% at 50% 29%, #000 60%, transparent 100%) }
+  .ov-glabela{ -webkit-mask-image:radial-gradient(ellipse 5.5% 5.5% at 50% 34.5%, #000 55%, transparent 100%);
+               mask-image:radial-gradient(ellipse 5.5% 5.5% at 50% 34.5%, #000 55%, transparent 100%) }
+  .ov-olho-d{ -webkit-mask-image:radial-gradient(ellipse 6.5% 6% at 25% 41%, #000 55%, transparent 100%);
+              mask-image:radial-gradient(ellipse 6.5% 6% at 25% 41%, #000 55%, transparent 100%) }
+  .ov-olho-e{ -webkit-mask-image:radial-gradient(ellipse 6.5% 6% at 75% 41%, #000 55%, transparent 100%);
+              mask-image:radial-gradient(ellipse 6.5% 6% at 75% 41%, #000 55%, transparent 100%) }
+
+  /* áreas clicáveis */
+  .hit{ position:absolute; background:transparent; border:0; cursor:none; z-index:5 }
+  .hit:focus-visible{ outline:1px solid var(--champagne-2); outline-offset:-1px }
+  .hit-testa{ left:26%; top:22%; width:48%; height:13.5% }
+  .hit-glabela{ left:43.5%; top:29.5%; width:13%; height:10% }
+  .hit-olho-d{ left:17.5%; top:35.5%; width:15%; height:11% }
+  .hit-olho-e{ left:67.5%; top:35.5%; width:15%; height:11% }
+  .hit.done{ cursor:default }
+  .hit:not(.done):hover{ box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--champagne-2) 35%, transparent) }
+
+  /* ondulação dourada no clique */
+  .ripple{ position:absolute; width:14px; height:14px; border-radius:50%;
+    border:2px solid var(--champagne); opacity:0; pointer-events:none; z-index:6;
+    transform:translate(-50%,-50%) }
+  .ripple.go{ animation:rip 1s var(--ease-lux) forwards }
+  @keyframes rip{ 0%{ opacity:.95; scale:1 } 100%{ opacity:0; scale:6 } }
+
+  /* selo educativo sobre o palco */
+  .stage .selo{ position:absolute; left:0; bottom:0; z-index:7; padding:.5rem 1rem;
+    font-size:.62rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--porcelain); background:color-mix(in srgb, var(--graphite) 74%, transparent);
+    backdrop-filter:blur(6px); pointer-events:none }
+
+  /* comparar (segurar) */
+  .cmp{ margin-top:1rem; display:inline-flex; align-items:center; gap:.7rem;
+    font-size:.78rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
+    color:color-mix(in srgb, var(--porcelain) 70%, transparent); cursor:pointer;
+    border:1px solid color-mix(in srgb, var(--champagne-2) 30%, transparent); padding:.7rem 1.2rem }
+  .cmp:active{ border-color:var(--champagne-2); color:var(--champagne-2) }
+
+  /* cursor-seringa */
+  #syr{ position:fixed; z-index:60; pointer-events:none; width:74px; height:74px;
+    transform:translate(-6px,-68px) rotate(38deg); transform-origin:6px 68px;
+    opacity:0; transition:opacity .25s }
+  #syr.on{ opacity:1 }
+  #syr.pulse{ animation:inject .35s var(--ease-lux) }
+  @keyframes inject{ 40%{ transform:translate(-6px,-68px) rotate(38deg) scale(.92) } }
+  @media (hover:none){ #syr{ display:none } .stage{ cursor:auto } .hit{ cursor:pointer } }
+
+  /* painel lateral */
+  .steps{ display:grid; gap:1rem }
+  .step{ display:flex; align-items:center; gap:1rem; padding:1.15rem 1.3rem;
+    border:1px solid color-mix(in srgb, var(--champagne-2) 22%, transparent);
+    transition:all .5s var(--ease-lux) }
+  .step .n{ font-family:var(--serif); font-style:italic; color:var(--champagne-2) }
+  .step .ck{ margin-left:auto; width:22px; height:22px; border-radius:50%;
+    border:1px solid color-mix(in srgb, var(--champagne-2) 45%, transparent);
+    display:grid; place-items:center; font-size:.7rem; color:transparent; transition:all .5s }
+  .step.done{ background:color-mix(in srgb, var(--champagne) 10%, transparent); border-color:var(--champagne) }
+  .step.done .ck{ background:var(--champagne); border-color:var(--champagne); color:var(--graphite) }
+
+  .result{ margin-top:var(--sp-3); padding:2rem; text-align:center;
+    border:1px solid var(--champagne); background:color-mix(in srgb, var(--champagne) 8%, transparent);
+    opacity:0; transform:translateY(18px); visibility:hidden; transition:all .8s var(--ease-lux) }
+  .result.show{ opacity:1; transform:none; visibility:visible }
+  .result h3{ font-size:1.7rem }
+</style>
+<link rel="alternate" hreflang="pt-BR" href="https://espacodaplastica.com.br/simuladores/botox/">
+<link rel="alternate" hreflang="es" href="https://espacodaplastica.com.br/es/simuladores/botox/">
+<link rel="alternate" hreflang="en" href="https://espacodaplastica.com.br/en/simuladores/botox/">
+<link rel="alternate" hreflang="x-default" href="https://espacodaplastica.com.br/simuladores/botox/">
+</head>
+<body class="dark" style="background:var(--forest-deep)">
+
+<header class="nav scrolled">
+  <a class="nav-logo" href="../../index.html"><img class="lg-sym" src="/img/logo-simbolo.svg" alt="Espaço da Plástica"><span class="lg-tx"><span class="lg-top">Espaço da</span><span class="lg-main">Plástica</span><small>Hospital · Campo Grande</small></span></a>
+  <nav class="nav-links">
+    <a href="../../medicos/">Cuerpo Clínico</a>
+    <a href="../../especialidades/">Especialidades</a>
+    <a href="../../estrutura/">El Hospital</a>
+    <a href="../../seguranca/">Seguridad</a>
+    <a href="../../hotelaria/">Hotelería</a>
+    <a href="../../simuladores/">Simuladores</a>
+  </nav>
+  <div style="display:flex; align-items:center; gap:1rem">
+    <a class="btn btn-gold nav-cta" href="#" data-wa="¡Hola! Probé el simulador de botox en el sitio web y me gustaría agendar una evaluación.">Agendar evaluación</a>
+    <div class="lang-switch" role="group" aria-label="Idioma / Language"><a class="lang" href="/simuladores/botox/" hreflang="pt-BR" title="Português (Brasil)"><img src="/img/flags/br.svg" alt="PT"></a><a class="lang is-active" aria-current="true" href="/es/simuladores/botox/" hreflang="es" title="Español"><img src="/img/flags/es.svg" alt="ES"></a><a class="lang" href="/en/simuladores/botox/" hreflang="en" title="English"><img src="/img/flags/us.svg" alt="EN"></a></div>
+    <button class="burger" aria-label="Menú"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="menu">
+  <a href="../../index.html">Inicio</a>
+  <a href="../../medicos/">Cuerpo Clínico</a>
+  <a href="../../especialidades/">Especialidades</a>
+  <a href="../../estrutura/">El Hospital</a>
+  <a href="../../seguranca/">Seguridad</a>
+  <a href="../../hotelaria/">Hotelería</a>
+  <a href="../../simuladores/">Simuladores</a>
+  <a href="../../blog/">Blog</a>
+  <a href="../../contato/">Contacto</a>
+  <div class="lang-switch" role="group" aria-label="Idioma / Language"><a class="lang" href="/simuladores/botox/" hreflang="pt-BR" title="Português (Brasil)"><img src="/img/flags/br.svg" alt="PT"></a><a class="lang is-active" aria-current="true" href="/es/simuladores/botox/" hreflang="es" title="Español"><img src="/img/flags/es.svg" alt="ES"></a><a class="lang" href="/en/simuladores/botox/" hreflang="en" title="English"><img src="/img/flags/us.svg" alt="EN"></a></div>
+</nav>
+
+<section class="page-head" style="padding-bottom:var(--sp-3)">
+  <div class="wrap">
+    <p class="overline" style="color:var(--champagne-2)">Simulador educativo</p>
+    <h1>Toque las líneas. Vea la piel <em>descansar</em>.</h1>
+    <p class="lead">Pase el cursor por el rostro — se convierte en una jeringa. Haga clic en las regiones marcadas
+      y observe cómo las líneas de expresión se suavizan, región por región.</p>
+    <p class="disclaimer mt-3" style="max-width:64ch"><strong>Este es un simulador ilustrativo sobre una modelo
+      virtual creada por inteligencia artificial.</strong> Demuestra cómo actúa la toxina botulínica —
+      no representa ni promete un resultado individual, que varía según cada caso y depende de una evaluación médica.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:var(--sp-3)">
+  <div class="wrap sim-stage">
+
+    <!-- Palco fotográfico -->
+    <div>
+      <div class="stage" id="stage" aria-label="Fotografía ilustrativa de una modelo virtual con líneas de expresión clicables">
+        <img class="base" src="/img/sim/botox-base.jpg" alt="Modelo virtual — antes de la simulación">
+        <div class="ov ov-testa" data-ov="testa"></div>
+        <div class="ov ov-glabela" data-ov="glabela"></div>
+        <div class="ov ov-olho-d" data-ov="olho-d"></div>
+        <div class="ov ov-olho-e" data-ov="olho-e"></div>
+        <button class="hit hit-testa" data-zone="testa" aria-label="Suavizar líneas de la frente"></button>
+        <button class="hit hit-glabela" data-zone="glabela" aria-label="Suavizar líneas entre las cejas"></button>
+        <button class="hit hit-olho-d" data-zone="olho-d" aria-label="Suavizar contorno del ojo derecho"></button>
+        <button class="hit hit-olho-e" data-zone="olho-e" aria-label="Suavizar contorno del ojo izquierdo"></button>
+        <span class="ripple" id="ripple"></span>
+        <span class="selo">Modelo virtual · imagen generada por IA</span>
+      </div>
+      <button class="cmp" id="cmp" type="button">Mantenga presionado para comparar con el antes</button>
+    </div>
+
+    <!-- Painel -->
+    <div>
+      <p class="overline" style="color:var(--champagne-2)">Regiones</p>
+      <div class="steps mt-3">
+        <div class="step" data-step="testa"><span class="n">01</span> Líneas de la frente <span class="ck">✓</span></div>
+        <div class="step" data-step="glabela"><span class="n">02</span> Entre las cejas <span class="ck">✓</span></div>
+        <div class="step" data-step="olho-d"><span class="n">03</span> Contorno del ojo derecho <span class="ck">✓</span></div>
+        <div class="step" data-step="olho-e"><span class="n">04</span> Contorno del ojo izquierdo <span class="ck">✓</span></div>
+      </div>
+
+      <div class="result" id="result" aria-live="polite">
+        <p class="overline center" style="color:var(--champagne-2)">¿Y entonces?</p>
+        <h3 class="mt-2">¿Le gustó el resultado? <em>Agende su evaluación.</em></h3>
+        <p class="mt-2" style="color:color-mix(in srgb, var(--porcelain) 70%, transparent)">
+          En la consulta, uno de los cirujanos evalúa sus líneas de expresión reales — y conversa con usted sobre lo que tiene sentido.</p>
+        <div class="mt-3" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap">
+          <a class="btn btn-gold" href="#" data-wa="¡Hola! Probé el simulador de botox en el sitio web y me gustaría agendar una evaluación.">Agendar evaluación <span class="arr">→</span></a>
+          <button class="btn btn-ghost" id="reset">Reiniciar</button>
+        </div>
+      </div>
+
+      <p class="disclaimer mt-3">Simulación ilustrativa con fines exclusivamente educativos, sobre la imagen de
+        una modelo virtual generada por IA. No representa el resultado de un tratamiento, que varía según cada caso y
+        depende de una evaluación médica individual. Todo procedimiento tiene indicaciones, contraindicaciones y riesgos.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="legal">
+      <span>© <span data-year>2026</span> Hospital Espaço da Plástica S/S · CNPJ 14.257.355/0001-75 · CRM/MS 1067</span>
+      <span>Resp. Técnico: Dr. Rodrigo Anache Anbar · CRM/MS 4999 · RQE 3691</span>
+      <span>Resp. Clínico: Dr. Rafael Anache Anbar · CRM/MS 5000 · RQE 3692</span>
+      <span>Este sitio web tiene carácter informativo y no sustituye la consulta médica.</span>
+      <span class="credit">Sitio desarrollado por <img src="/img/raydix.png" alt="RAYDIX" loading="lazy"></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" data-wa="¡Hola! Probé el simulador de botox en el sitio web y me gustaría agendar una evaluación." aria-label="Hablar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.2-3.4-.7-2.8-1.2-4.7-4-4.8-4.2-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.4Z"/></svg>
+  <span class="lbl">Agendar evaluación</span>
+</a>
+
+<!-- Cursor-seringa -->
+<div id="syr" aria-hidden="true">
+  <svg viewBox="0 0 74 74" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#DCC48F" stroke-width="2" stroke-linecap="round">
+      <line x1="6" y1="68" x2="22" y2="52"/>
+      <rect x="20" y="34" width="26" height="16" rx="2" transform="rotate(-45 33 42)"/>
+      <line x1="40" y1="26" x2="50" y2="36"/>
+      <line x1="46" y1="18" x2="58" y2="30"/>
+      <rect x="24" y="40" width="10" height="7" rx="1" transform="rotate(-45 29 43)" fill="#DCC48F" opacity=".45"/>
+    </g>
+  </svg>
+</div>
+
+<script src="/js/main-es.js"></script>
+<script>
+(() => {
+  'use strict';
+  const stage = document.getElementById('stage');
+  const syr = document.getElementById('syr');
+  const ripple = document.getElementById('ripple');
+  const result = document.getElementById('result');
+  const hits = [...stage.querySelectorAll('.hit')];
+  const total = hits.length;
+  let done = 0;
+
+  /* pré-carrega a versão suavizada */
+  const pre = new Image(); pre.src = '../../img/sim/botox-suave.jpg';
+
+  /* cursor-seringa */
+  stage.addEventListener('pointermove', (e) => {
+    if (e.pointerType !== 'mouse') return;
+    syr.classList.add('on');
+    syr.style.left = e.clientX + 'px';
+    syr.style.top = e.clientY + 'px';
+  });
+  stage.addEventListener('pointerleave', () => syr.classList.remove('on'));
+
+  const treat = (hit, x, y) => {
+    if (hit.classList.contains('done')) return;
+    hit.classList.add('done');
+    const zona = hit.dataset.zone;
+    const ov = stage.querySelector(`.ov[data-ov="${zona}"]`);
+    if (ov) ov.classList.add('on');
+    const step = document.querySelector(`.step[data-step="${zona}"]`);
+    if (step) step.classList.add('done');
+    syr.classList.remove('pulse'); void syr.offsetWidth; syr.classList.add('pulse');
+    if (x != null) {
+      const r = stage.getBoundingClientRect();
+      ripple.style.left = (x - r.left) + 'px';
+      ripple.style.top = (y - r.top) + 'px';
+      ripple.classList.remove('go'); void ripple.getBoundingClientRect(); ripple.classList.add('go');
+    }
+    if (++done === total) setTimeout(() => {
+      result.classList.add('show');
+      result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 1300);
+  };
+
+  hits.forEach(hit => {
+    hit.addEventListener('click', (e) => treat(hit, e.clientX, e.clientY));
+    hit.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); treat(hit, null, null); }
+    });
+  });
+
+  /* comparar com o antes (segurar) */
+  const cmp = document.getElementById('cmp');
+  const ovs = [...stage.querySelectorAll('.ov')];
+  const hold = (on) => ovs.forEach(o => { o.style.transition = 'opacity .25s'; o.style.opacity = on ? 0 : ''; if (!on) setTimeout(() => o.style.transition = '', 260); });
+  cmp.addEventListener('pointerdown', () => hold(true));
+  ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => cmp.addEventListener(ev, () => hold(false)));
+
+  document.getElementById('reset').addEventListener('click', () => {
+    done = 0;
+    hits.forEach(h => h.classList.remove('done'));
+    ovs.forEach(o => o.classList.remove('on'));
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('done'));
+    result.classList.remove('show');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+[
+ {
+  "slug": "protese-de-mama",
+  "nome": "Prótesis de Mama",
+  "grupo": "Mamas"
+ },
+ {
+  "slug": "mamoplastia",
+  "nome": "Mamoplastia",
+  "grupo": "Mamas"
+ },
+ {
+  "slug": "ginecomastia",
+  "nome": "Ginecomastia",
+  "grupo": "Mamas"
+ },
+ {
+  "slug": "abdominoplastia",
+  "nome": "Abdominoplastia",
+  "grupo": "Cuerpo"
+ },
+ {
+  "slug": "lipoescultura",
+  "nome": "Lipoescultura",
+  "grupo": "Cuerpo"
+ },
+ {
+  "slug": "protese-de-gluteo",
+  "nome": "Prótesis de Glúteos",
+  "grupo": "Cuerpo"
+ },
+ {
+  "slug": "protese-de-panturrilha",
+  "nome": "Prótesis de Pantorrillas",
+  "grupo": "Cuerpo"
+ },
+ {
+  "slug": "proteses-e-contorno-corporal",
+  "nome": "Prótesis y Contorno Corporal",
+  "grupo": "Cuerpo"
+ },
+ {
+  "slug": "pos-bariatrica",
+  "nome": "Cirugía Posbariátrica",
+  "grupo": "Cuerpo"
+ },
+ {
+  "slug": "correcao-de-cicatriz",
+  "nome": "Corrección de Cicatrices",
+  "grupo": "Cuerpo"
+ },
+ {
+  "slug": "tratamento-de-queimaduras",
+  "nome": "Tratamiento de Quemaduras",
+  "grupo": "Cuerpo"
+ },
+ {
+  "slug": "rinoplastia",
+  "nome": "Rinoplastia",
+  "grupo": "Rostro"
+ },
+ {
+  "slug": "lifting-facial",
+  "nome": "Estiramiento Facial",
+  "grupo": "Rostro"
+ },
+ {
+  "slug": "blefaroplastia",
+  "nome": "Blefaroplastia",
+  "grupo": "Rostro"
+ },
+ {
+  "slug": "otoplastia",
+  "nome": "Otoplastia",
+  "grupo": "Rostro"
+ },
+ {
+  "slug": "mentoplastia",
+  "nome": "Mentoplastia",
+  "grupo": "Rostro"
+ },
+ {
+  "slug": "bichectomia",
+  "nome": "Bichectomía",
+  "grupo": "Rostro"
+ },
+ {
+  "slug": "cirurgia-intima",
+  "nome": "Cirugía Íntima (Ninfoplastia)",
+  "grupo": "Íntima"
+ },
+ {
+  "slug": "transplante-capilar",
+  "nome": "Trasplante Capilar (FUE)",
+  "grupo": "Capilar"
+ },
+ {
+  "slug": "botox",
+  "nome": "Bótox",
+  "grupo": "No quirúrgico"
+ },
+ {
+  "slug": "preenchimento-facial",
+  "nome": "Relleno Facial",
+  "grupo": "No quirúrgico"
+ },
+ {
+  "slug": "harmonizacao-facial",
+  "nome": "Armonización Facial",
+  "grupo": "No quirúrgico"
+ },
+ {
+  "slug": "fios-de-sustentacao",
+  "nome": "Hilos Tensores",
+  "grupo": "No quirúrgico"
+ },
+ {
+  "slug": "bioestimulador-de-colageno",
+  "nome": "Bioestimulador de Colágeno",
+  "grupo": "No quirúrgico"
+ },
+ {
+  "slug": "pdrn",
+  "nome": "PDRN",
+  "grupo": "No quirúrgico"
+ },
+ {
+  "slug": "terapia-com-celulas-tronco",
+  "nome": "Terapia con Células Madre",
+  "grupo": "No quirúrgico"
+ },
+ {
+  "slug": "dermoabrasao",
+  "nome": "Dermoabrasión",
+  "grupo": "No quirúrgico"
+ },
+ {
+  "slug": "peeling",
+  "nome": "Peeling",
+  "grupo": "No quirúrgico"
+ },
+ {
+  "slug": "bodytite",
+  "nome": "BodyTite",
+  "grupo": "Tecnología"
+ },
+ {
+  "slug": "morpheus-8",
+  "nome": "Morpheus 8",
+  "grupo": "Tecnología"
+ },
+ {
+  "slug": "laser-de-co2",
+  "nome": "Láser de CO2",
+  "grupo": "Tecnología"
+ }
+]

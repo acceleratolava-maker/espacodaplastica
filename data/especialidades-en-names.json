@@ -1,0 +1,157 @@
+[
+ {
+  "slug": "protese-de-mama",
+  "nome": "Breast Augmentation",
+  "grupo": "Breasts"
+ },
+ {
+  "slug": "mamoplastia",
+  "nome": "Mammoplasty",
+  "grupo": "Breasts"
+ },
+ {
+  "slug": "ginecomastia",
+  "nome": "Gynecomastia",
+  "grupo": "Breasts"
+ },
+ {
+  "slug": "abdominoplastia",
+  "nome": "Tummy Tuck",
+  "grupo": "Body"
+ },
+ {
+  "slug": "lipoescultura",
+  "nome": "Liposculpture",
+  "grupo": "Body"
+ },
+ {
+  "slug": "protese-de-gluteo",
+  "nome": "Gluteal Implants",
+  "grupo": "Body"
+ },
+ {
+  "slug": "protese-de-panturrilha",
+  "nome": "Calf Implants",
+  "grupo": "Body"
+ },
+ {
+  "slug": "proteses-e-contorno-corporal",
+  "nome": "Implants and Body Contouring",
+  "grupo": "Body"
+ },
+ {
+  "slug": "pos-bariatrica",
+  "nome": "Post-Bariatric Surgery",
+  "grupo": "Body"
+ },
+ {
+  "slug": "correcao-de-cicatriz",
+  "nome": "Scar Revision",
+  "grupo": "Body"
+ },
+ {
+  "slug": "tratamento-de-queimaduras",
+  "nome": "Burn Treatment",
+  "grupo": "Body"
+ },
+ {
+  "slug": "rinoplastia",
+  "nome": "Rhinoplasty",
+  "grupo": "Face"
+ },
+ {
+  "slug": "lifting-facial",
+  "nome": "Facelift",
+  "grupo": "Face"
+ },
+ {
+  "slug": "blefaroplastia",
+  "nome": "Blepharoplasty",
+  "grupo": "Face"
+ },
+ {
+  "slug": "otoplastia",
+  "nome": "Otoplasty",
+  "grupo": "Face"
+ },
+ {
+  "slug": "mentoplastia",
+  "nome": "Chin Surgery (Mentoplasty)",
+  "grupo": "Face"
+ },
+ {
+  "slug": "bichectomia",
+  "nome": "Buccal Fat Removal",
+  "grupo": "Face"
+ },
+ {
+  "slug": "cirurgia-intima",
+  "nome": "Intimate Surgery (Labiaplasty)",
+  "grupo": "Intimate"
+ },
+ {
+  "slug": "transplante-capilar",
+  "nome": "Hair Transplant (FUE)",
+  "grupo": "Hair"
+ },
+ {
+  "slug": "botox",
+  "nome": "Botox",
+  "grupo": "Non-Surgical"
+ },
+ {
+  "slug": "preenchimento-facial",
+  "nome": "Facial Fillers",
+  "grupo": "Non-Surgical"
+ },
+ {
+  "slug": "harmonizacao-facial",
+  "nome": "Facial Harmonization",
+  "grupo": "Non-Surgical"
+ },
+ {
+  "slug": "fios-de-sustentacao",
+  "nome": "Thread Lift",
+  "grupo": "Non-Surgical"
+ },
+ {
+  "slug": "bioestimulador-de-colageno",
+  "nome": "Collagen Biostimulators",
+  "grupo": "Non-Surgical"
+ },
+ {
+  "slug": "pdrn",
+  "nome": "PDRN",
+  "grupo": "Non-Surgical"
+ },
+ {
+  "slug": "terapia-com-celulas-tronco",
+  "nome": "Stem Cell Therapy",
+  "grupo": "Non-Surgical"
+ },
+ {
+  "slug": "dermoabrasao",
+  "nome": "Dermabrasion",
+  "grupo": "Non-Surgical"
+ },
+ {
+  "slug": "peeling",
+  "nome": "Skin Peels",
+  "grupo": "Non-Surgical"
+ },
+ {
+  "slug": "bodytite",
+  "nome": "BodyTite",
+  "grupo": "Technology"
+ },
+ {
+  "slug": "morpheus-8",
+  "nome": "Morpheus 8",
+  "grupo": "Technology"
+ },
+ {
+  "slug": "laser-de-co2",
+  "nome": "CO2 Laser",
+  "grupo": "Technology"
+ }
+]
