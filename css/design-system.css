@@ -427,6 +427,12 @@ h1 em, h2 em, h3 em{ color:var(--champagne); font-weight:340 }
   border-top:1px solid color-mix(in srgb, var(--porcelain) 12%, transparent);
   font-size:.78rem; color:color-mix(in srgb, var(--porcelain) 45%, transparent);
   display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between }
+.footer .legal .credit{ flex-basis:100%; text-align:center; margin-top:.7rem;
+  font-size:.72rem; letter-spacing:.12em; color:color-mix(in srgb, var(--porcelain) 30%, transparent) }
+.footer .legal .credit a{ color:inherit; text-decoration:none; transition:color .25s ease }
+.footer .legal .credit b{ font-weight:600; letter-spacing:.2em;
+  color:color-mix(in srgb, var(--champagne-2) 80%, transparent) }
+.footer .legal .credit a:hover b{ color:var(--champagne-2) }
 
 /* ---------- REVEALS (JS adiciona .in) ---------- */
 .rv{ opacity:0; transform:translateY(34px); transition:opacity var(--dur) var(--ease-lux), transform var(--dur) var(--ease-lux) }
