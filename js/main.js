@@ -5,6 +5,13 @@
   // Camada de dados p/ GA4/GTM (eventos de conversao)
   window.dataLayer = window.dataLayer || [];
 
+  // Raiz do site autodetectada a partir do próprio script (funciona em domínio raiz E em subpasta/preview)
+  const RAIZ = new URL('..', document.currentScript?.src || location.href).pathname;
+
+  // Landing page de agendamento: TODAS as saídas de paciente para o WhatsApp
+  // passam por ela (o botão de WhatsApp vive lá). Funil centralizado + mensurável.
+  const LP_AGENDAR = RAIZ + 'agendar/';
+
   /* ---------- Nav: fundo ao rolar ---------- */
   const nav = document.querySelector('.nav');
   const onScroll = () => nav && nav.classList.toggle('scrolled', window.scrollY > 40);
@@ -50,20 +57,22 @@
   }, { threshold: 0.5 });
   document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
 
-  /* ---------- WhatsApp com mensagem contextual ---------- */
-  // Qualquer elemento com [data-wa] abre o WhatsApp oficial com mensagem pré-preenchida.
-  const WA_PHONE = '5567998834444';
+  /* ---------- CTAs de agendamento → Landing Page /agendar/ ---------- */
+  // Qualquer elemento com [data-wa] leva à landing de agendamento, carregando a
+  // mensagem contextual da página. A saída real para o WhatsApp acontece na LP.
+  const WA_PHONE = '5567998834444'; // usado apenas pelo fluxo B2B (médicos), abaixo
   document.querySelectorAll('[data-wa]').forEach(el => {
     el.addEventListener('click', (ev) => {
       ev.preventDefault();
       const msg = el.dataset.wa || 'Olá! Vim pelo site e gostaria de agendar uma avaliação.';
-      window.dataLayer.push({ event: 'whatsapp_click', wa_context: (msg||'').slice(0,80) });
-      window.open(`https://api.whatsapp.com/send?phone=${WA_PHONE}&text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+      window.dataLayer.push({ event: 'cta_agendar', cta_context: (msg||'').slice(0,80) });
+      window.location.href = `${LP_AGENDAR}?msg=${encodeURIComponent(msg)}`;
     });
   });
 
-  /* ---------- Formulários de lead → WhatsApp ---------- */
-  // Sem backend na v1: o form redige a mensagem e envia pro WhatsApp oficial.
+  /* ---------- Formulários de lead ---------- */
+  // Paciente: o form leva os dados à landing /agendar/, que monta o WhatsApp.
+  // B2B (médico interessado em operar no hospital): segue direto ao WhatsApp — não é fluxo de paciente.
   document.querySelectorAll('form[data-lead]').forEach(form => {
     form.addEventListener('submit', (ev) => {
       ev.preventDefault();
@@ -72,28 +81,26 @@
       const interesse = (d.get('interesse') || form.dataset.lead || '').toString().trim();
       const obs = (d.get('mensagem') || '').toString().trim();
       window.dataLayer.push({ event: 'lead_submit', lead_interest: interesse || form.dataset.lead || '' });
-      let msg;
       if (form.dataset.leadMode === 'b2b') {
         // Lead profissional (ex.: médico interessado em operar no hospital)
-        msg = `Olá! Sou ${nome || 'médico(a)'}${interesse ? ` (${interesse})` : ''} e gostaria de conhecer a estrutura do hospital para realizar procedimentos.`;
+        let msg = `Olá! Sou ${nome || 'médico(a)'}${interesse ? ` (${interesse})` : ''} e gostaria de conhecer a estrutura do hospital para realizar procedimentos.`;
         if (obs) msg += ` ${obs}`;
-      } else {
-        msg = `Olá! Sou ${nome || 'paciente vindo(a) do site'} e gostaria de agendar uma avaliação`;
-        if (interesse) msg += ` sobre ${interesse}`;
-        msg += '.';
-        if (obs) msg += ` ${obs}`;
+        window.open(`https://api.whatsapp.com/send?phone=${WA_PHONE}&text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+        const ok = form.querySelector('.form-ok');
+        if (ok) { ok.hidden = false; form.reset(); }
+        return;
       }
-      window.open(`https://api.whatsapp.com/send?phone=${WA_PHONE}&text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
-      const ok = form.querySelector('.form-ok');
-      if (ok) { ok.hidden = false; form.reset(); }
+      const q = new URLSearchParams();
+      if (nome) q.set('nome', nome);
+      if (interesse) q.set('interesse', interesse);
+      if (obs) q.set('obs', obs);
+      window.location.href = `${LP_AGENDAR}${q.toString() ? '?' + q.toString() : ''}`;
     });
   });
 
   /* ---------- Mapa-resumo (organograma clicável, presente em todas as páginas) ---------- */
   // Botão flutuante "Resumo" -> overlay com o organograma de tudo que o hospital faz.
   // Cada quadro é um botão que leva à página daquele procedimento (dados: /data/especialidades.json).
-  // Raiz do site autodetectada a partir do próprio script (funciona em domínio raiz E em subpasta/preview)
-  const RAIZ = new URL('..', document.currentScript?.src || location.href).pathname;
   const GRUPO_ORDEM = ['Mamas', 'Corpo', 'Face', 'Íntima', 'Capilar', 'Não cirúrgico', 'Tecnologia'];
   const TOPO = [
     ['O Hospital', RAIZ + 'estrutura/'], ['Corpo Clínico', RAIZ + 'medicos/'], ['Segurança', RAIZ + 'seguranca/'],
