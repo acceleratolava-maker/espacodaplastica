@@ -58,6 +58,7 @@
       ev.preventDefault();
       const msg = el.dataset.wa || '¡Hola! Vengo del sitio web y me gustaría agendar una evaluación.';
       window.dataLayer.push({ event: 'whatsapp_click', wa_context: (msg||'').slice(0,80) });
+      if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'WhatsApp - CTA ES' });
       window.open(`https://api.whatsapp.com/send?phone=${WA_PHONE}&text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
   });
@@ -83,6 +84,7 @@
         msg += '.';
         if (obs) msg += ` ${obs}`;
       }
+      if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'WhatsApp - Form ES' });
       window.open(`https://api.whatsapp.com/send?phone=${WA_PHONE}&text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
       const ok = form.querySelector('.form-ok');
       if (ok) { ok.hidden = false; form.reset(); }
