@@ -187,11 +187,11 @@
     "cta_msg": "Olá! Vim pelo site e gostaria de agendar uma avaliação sobre Lipoescultura."
   },
   {
-    "slug": "protese-de-gluteo",
-    "nome": "Prótese de Glúteo",
+    "slug": "preenchimento-de-gluteo",
+    "nome": "Preenchimento de Glúteo",
     "grupo": "Corpo",
-    "cirurgico": true,
-    "resumo": "A prótese de glúteo utiliza implantes específicos para aumentar e dar forma à região glútea, trabalhando a proporção entre tronco e quadril. Costuma ser considerada quando os exercícios não alcançam o volume desejado ou quando não há gordura suficiente para enxertia.",
+    "cirurgico": false,
+    "resumo": "O preenchimento de glúteo é um procedimento injetável que busca acrescentar volume, dar projeção ou harmonizar o contorno da região, sem os cortes de uma cirurgia de implante. Pode ser realizado com ácido hialurônico ou com preenchedor de longa duração — a escolha é definida na avaliação individual.",
     "beneficios": [
       "Aumentar o volume dos glúteos com implantes específicos para a região",
       "Trabalhar a proporção entre cintura, quadril e glúteos",
